@@ -1,5 +1,5 @@
 package com.app.client.investmentmanager;
 
-public class Test {
+public class AA {
 
 }
