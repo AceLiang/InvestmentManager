@@ -1,4 +1,5 @@
-package com.app.client.investmentmanager;
+package com.app.client.investment;
+
 
 import android.app.Activity;
 import android.os.Bundle;

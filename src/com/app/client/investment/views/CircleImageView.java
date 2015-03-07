@@ -1,6 +1,7 @@
-package com.app.client.investmentmanager.views;
+package com.app.client.investment.views;
 
-import com.app.client.investmentmanager.R;
+
+import com.app.client.investment.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
