@@ -3,10 +3,21 @@ package com.app.client.investment.manager;
 import java.util.ArrayList;
 
 import com.app.client.investment.R;
+import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.components.Legend.LegendPosition;
+import com.github.mikephil.charting.components.XAxis.XAxisPosition;
+import com.github.mikephil.charting.components.YAxis.AxisDependency;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
@@ -33,8 +44,12 @@ public class FragmentAccountNews extends Fragment {
 	private Button btnAllChart;
 
 	private PieChart piechartView;
+	private HorizontalBarChart barChartBounceRate;
+	private LineChart lineChart;
 
 	// private Typeface tf;
+	
+	FakeDataFactory factory = new FakeDataFactory() ;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,6 +87,91 @@ public class FragmentAccountNews extends Fragment {
 		piechartView.setHoleRadius(45f);
 		piechartView.setTransparentCircleRadius(50f);
 
+		barChartBounceRate = (HorizontalBarChart) root
+				.findViewById(R.id.barChartBounceRate);
+
+		barChartBounceRate.setDrawBarShadow(false);
+
+		barChartBounceRate.setDrawValueAboveBar(true);
+
+		barChartBounceRate.setDescription("");
+
+		// if more than 60 entries are displayed in the chart, no values will be
+		// drawn
+		barChartBounceRate.setMaxVisibleValueCount(60);
+
+		// scaling can now only be done on x- and y-axis separately
+		barChartBounceRate.setPinchZoom(false);
+
+		// draw shadows for each bar that show the maximum value
+		// mChart.setDrawBarShadow(true);
+
+		// mChart.setDrawXLabels(false);
+
+		barChartBounceRate.setDrawGridBackground(false);
+
+		// mChart.setDrawYLabels(false);
+
+		XAxis xl = barChartBounceRate.getXAxis();
+		xl.setPosition(XAxisPosition.BOTTOM);
+		xl.setDrawAxisLine(false);
+		xl.setDrawGridLines(false);
+		xl.setGridLineWidth(0.3f);
+		// xl.setEnabled(false);
+
+		YAxis yl = barChartBounceRate.getAxisLeft();
+		yl.setDrawAxisLine(false);
+		yl.setDrawGridLines(false);
+		yl.setGridLineWidth(0.3f);
+		yl.setStartAtZero(false);
+		yl.setDrawLabels(false);
+
+		YAxis yr = barChartBounceRate.getAxisRight();
+		yr.setDrawAxisLine(false);
+		yr.setDrawGridLines(false);
+		yr.setStartAtZero(false);
+		yr.setDrawLabels(false);
+
+		lineChart = (LineChart) root.findViewById(R.id.lineChart);
+
+		// no description text
+		lineChart.setDescription("");
+		lineChart
+				.setNoDataTextDescription("You need to provide data for the chart.");
+
+		// enable value highlighting
+		lineChart.setHighlightEnabled(true);
+
+		// enable touch gestures
+		lineChart.setTouchEnabled(true);
+
+		// enable scaling and dragging
+		lineChart.setDragEnabled(true);
+		lineChart.setScaleEnabled(true);
+		lineChart.setDrawGridBackground(false);
+
+		// if disabled, scaling can be done on x- and y-axis separately
+		lineChart.setPinchZoom(true);
+
+		// set an alternative background color
+		lineChart.setBackgroundColor(Color.TRANSPARENT);
+		
+		XAxis xlLine = lineChart.getXAxis();
+		xlLine.setPosition(XAxisPosition.BOTTOM);
+		xlLine.setDrawAxisLine(true);
+		xlLine.setDrawGridLines(true);
+		
+		YAxis ylLine = lineChart.getAxisLeft();
+		ylLine.setDrawAxisLine(false);
+		ylLine.setDrawGridLines(false);
+		ylLine.setGridLineWidth(0.3f);
+		ylLine.setDrawLabels(false);
+
+		YAxis yrLine = lineChart.getAxisRight();
+		yrLine.setDrawAxisLine(false);
+		yrLine.setDrawGridLines(true);
+		yrLine.setDrawLabels(false);
+
 	}
 
 	private void initListener() {
@@ -103,7 +203,7 @@ public class FragmentAccountNews extends Fragment {
 
 	private void initData() {
 		// TODO Auto-generated method stub
-		PieData data = generatePieData();
+		PieData data = factory.generatePieData();
 		piechartView.setData(data);
 
 		// undo all highlights
@@ -115,37 +215,20 @@ public class FragmentAccountNews extends Fragment {
 		Legend l = piechartView.getLegend();
 		l.setPosition(LegendPosition.RIGHT_OF_CHART);
 		l.setXOffset(-15);
+
+		BarData barData = factory.generateBarChartData(3, 50);
+		barChartBounceRate.setData(barData);
+		barChartBounceRate.animateXY(1500, 1500);
+		Legend barChartL = barChartBounceRate.getLegend();
+		barChartL.setEnabled(false);
+		
+		
+		LineData lineData = factory.generateLineChartData();
+		lineChart.setData(lineData);
+		lineChart.animateXY(1500, 1500);
+		lineChart.getLegend().setEnabled(false);
+
 	}
 
-	/**
-	 * generates less data (1 DataSet, 4 values)
-	 * 
-	 * @return
-	 */
-	protected PieData generatePieData() {
-
-		int count = 4;
-
-		ArrayList<Entry> entries1 = new ArrayList<Entry>();
-		ArrayList<String> xVals = new ArrayList<String>();
-
-		xVals.add("Quarter 1");
-		xVals.add("Quarter 2");
-		xVals.add("Quarter 3");
-		xVals.add("Quarter 4");
-
-		for (int i = 0; i < count; i++) {
-			xVals.add("entry" + (i + 1));
-
-			entries1.add(new Entry((float) (Math.random() * 60) + 40, i));
-		}
-
-		PieDataSet ds1 = new PieDataSet(entries1, "Quarterly Revenues 2014");
-		ds1.setColors(ColorTemplate.VORDIPLOM_COLORS);
-		ds1.setSliceSpace(2f);
-
-		PieData d = new PieData(xVals, ds1);
-		// d.setValueTypeface(tf);
-		return d;
-	}
+	
 }
