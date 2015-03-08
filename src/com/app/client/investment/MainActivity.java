@@ -1,6 +1,7 @@
 package com.app.client.investment;
 
 
+import com.app.client.investment.fundresearch.FundResearchActivity;
 import com.app.client.investment.manager.InvestmentManagerActivity;
 
 import android.app.Activity;
@@ -67,6 +68,9 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.btnInvestmentManager:
 			gotoInvestmentManager();
 			break;
+		case R.id.btnFundResearch:
+			gotoFundResearch();
+			break ;
 
 		default:
 			break;
@@ -76,6 +80,12 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	public void gotoInvestmentManager(){
 		Intent intent = new Intent(this, InvestmentManagerActivity.class);
+		startActivity(intent);
+	}
+	
+	
+	public void gotoFundResearch(){
+		Intent intent = new Intent(this, FundResearchActivity.class);
 		startActivity(intent);
 	}
 }

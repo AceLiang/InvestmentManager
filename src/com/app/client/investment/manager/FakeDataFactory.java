@@ -46,7 +46,8 @@ public class FakeDataFactory {
 		set1.setFillAlpha(65);
 		set1.setFillColor(ColorTemplate.getHoloBlue());
 		set1.setHighLightColor(Color.rgb(244, 117, 117));
-
+		set1.setDrawFilled(true);
+        set1.setDrawCircles(false);
 		ArrayList<Entry> yVals2 = new ArrayList<Entry>();
 
 		for (int i = 0; i < count; i++) {

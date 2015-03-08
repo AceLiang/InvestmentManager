@@ -32,16 +32,20 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 /********
  * 
  * @author Ã÷Àñ ÕË»§¶¯Ì¬
  */
-public class FragmentAccountNews extends Fragment {
+public class FragmentAccountNews extends Fragment implements OnCheckedChangeListener{
 
-	private Button btnWeekChart;
-	private Button btnMonthChart;
-	private Button btnAllChart;
+	private RadioButton btnWeekChart;
+	private RadioButton btnMonthChart;
+	private RadioButton btnAllChart;
 
 	private PieChart piechartView;
 	private HorizontalBarChart barChartBounceRate;
@@ -67,9 +71,9 @@ public class FragmentAccountNews extends Fragment {
 
 	private void initViews(View root) {
 		// TODO Auto-generated method stub
-		btnWeekChart = (Button) root.findViewById(R.id.btnWeekChart);
-		btnMonthChart = (Button) root.findViewById(R.id.btnMonthChart);
-		btnAllChart = (Button) root.findViewById(R.id.btnAllChart);
+		btnWeekChart = (RadioButton) root.findViewById(R.id.btnWeekChart);
+		btnMonthChart = (RadioButton) root.findViewById(R.id.btnMonthChart);
+		btnAllChart = (RadioButton) root.findViewById(R.id.btnAllChart);
 
 		piechartView = (PieChart) root.findViewById(R.id.piechartView);
 		piechartView.setUsePercentValues(true);
@@ -176,29 +180,10 @@ public class FragmentAccountNews extends Fragment {
 
 	private void initListener() {
 		// TODO Auto-generated method stub
-		btnWeekChart.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				initData();
-			}
-		});
-
-		btnMonthChart.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				initData();
-			}
-		});
-
-		btnAllChart.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				initData();
-			}
-		});
+		btnWeekChart.setOnCheckedChangeListener(this);
+		btnMonthChart.setOnCheckedChangeListener(this);
+		btnAllChart.setOnCheckedChangeListener(this);
+		
 	}
 
 	private void initData() {
@@ -228,6 +213,13 @@ public class FragmentAccountNews extends Fragment {
 		lineChart.animateXY(1500, 1500);
 		lineChart.getLegend().setEnabled(false);
 
+	}
+
+
+	@Override
+	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		// TODO Auto-generated method stub
+		initData();
 	}
 
 	

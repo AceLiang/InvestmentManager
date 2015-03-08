@@ -9,8 +9,9 @@
         android:orientation="vertical" >
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#f0f0f0"
             android:padding="10dp" >
 
             <TextView
@@ -20,48 +21,69 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:background="#FFFFFF">
+            
+            <RadioGroup 
                 android:id="@+id/tabBounceArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
+                
 
-                <Button
+                <RadioButton
                     android:id="@+id/btnWeekChart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:button="@null"
+                    android:background="#FF0000"
+                    android:checked="true"
                     android:text="@string/label_week_bounce" />
 
-                <Button
+                <RadioButton
                     android:id="@+id/btnMonthChart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:button="@null"
+                    android:background="#FF0000"
                     android:text="@string/label_month_bounce" />
 
-                <Button
+                <RadioButton
                     android:id="@+id/btnAllChart"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:button="@null"
+                    android:background="#FF0000"
                     android:text="@string/label_all_bounce" />
-            </LinearLayout>
+            </RadioGroup>
+
+           
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/piechartView"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_below="@+id/tabBounceArea"
                 android:layout_centerHorizontal="true" />
+            
+            <Button 
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/piechartView"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="40dp"
+                android:text="生成报告"/>
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#F0f0f0"
             android:padding="10dp" >
 
             <TextView
@@ -79,6 +101,21 @@
                 android:id="@+id/barChartBounceRate"
                 android:layout_width="match_parent"
                 android:layout_height="300dp" />
+            
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投资金额（万元）：100"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上海白石投资"/>
+            </LinearLayout>
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChart"
