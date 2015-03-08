@@ -52,11 +52,11 @@
             </LinearLayout>
 
             <com.github.mikephil.charting.charts.PieChart
-                    android:id="@+id/piechartView"
-                    android:layout_below="@+id/tabBounceArea"
-                    android:layout_centerHorizontal="true"
-                    android:layout_width="300dp"
-                    android:layout_height="300dp" />
+                android:id="@+id/piechartView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/tabBounceArea"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -70,10 +70,16 @@
                 android:text="@string/label_invest_bounce_rate" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp" >
-        </RelativeLayout>
+            android:layout_height="600dp"
+            android:orientation="vertical" >
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/barChartBounceRate"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>
