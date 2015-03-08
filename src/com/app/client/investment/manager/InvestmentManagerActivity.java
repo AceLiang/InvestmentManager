@@ -21,7 +21,7 @@ public class InvestmentManagerActivity extends FragmentActivity {
 		setContentView(R.layout.activity_investment_manager);
 
 		mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-		mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+		mTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
 
 		mTabHost.addTab(
 				mTabHost.newTabSpec("tag1").setIndicator(
@@ -35,5 +35,6 @@ public class InvestmentManagerActivity extends FragmentActivity {
 				mTabHost.newTabSpec("tag3").setIndicator(
 						getString(R.string.lable_account_rank)),
 				FragmentAccountRank.class, null);
+		
 	}
 }
