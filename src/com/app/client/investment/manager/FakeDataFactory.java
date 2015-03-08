@@ -130,4 +130,41 @@ public class FakeDataFactory {
 		// d.setValueTypeface(tf);
 		return d;
 	}
+	
+	public LineData generateLineChartData(int count, float range) {
+
+        ArrayList<String> xVals = new ArrayList<String>();
+        for (int i = 0; i < count; i++) {
+            xVals.add((1990 +i) + "");
+        }
+
+        ArrayList<Entry> vals1 = new ArrayList<Entry>();
+
+        for (int i = 0; i < count; i++) {
+            float mult = (range + 1);
+            float val = (float) (Math.random() * mult) + 20;// + (float)
+                                                           // ((mult *
+                                                           // 0.1) / 10);
+            vals1.add(new Entry(val, i));
+        }
+        
+        // create a dataset and give it a type
+        LineDataSet set1 = new LineDataSet(vals1, "DataSet 1");
+        set1.setDrawCubic(true);
+        set1.setCubicIntensity(0.2f);
+        set1.setDrawFilled(true);
+        set1.setDrawCircles(false); 
+        set1.setLineWidth(2f);
+        set1.setCircleSize(5f);
+        set1.setHighLightColor(Color.rgb(244, 117, 117));
+        set1.setColor(Color.rgb(104, 241, 175));
+        set1.setFillColor(ColorTemplate.getHoloBlue());
+
+        // create a data object with the datasets
+        LineData data = new LineData(xVals, set1);
+        data.setValueTextSize(9f);
+        data.setDrawValues(false);
+
+        return data;
+    }
 }
