@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include 
+        layout="@layout/activity_fundresearch_common_header" />
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="15dp"
+        android:background="#4daec5"       
+        android:showDividers="middle">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF" 
+            android:text="业绩表现"
+            android:clickable="true"
+            android:onClick="showPerformance"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF" 
+            android:clickable="true"
+            android:text="基金简介"
+            android:onClick="showFundOverview"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF" 
+            android:clickable="true"
+            android:text="基金论坛"
+            android:onClick="showFundForum"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF" 
+            android:clickable="true"
+            android:text="公司简介"
+            android:onClick="showCompanyOverview"/>
+        
+        <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_weight="2"
+	        android:gravity="center">
+	        <ImageView 
+	            android:layout_width="18dp"
+	            android:layout_height="18dp"
+	            android:src="@drawable/ic_launcher"/>
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	            
+	            android:textSize="14sp"
+	            android:clickable="true"
+	            android:textColor="#FFFFFF" 
+	            android:text="投资他"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_fund_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
