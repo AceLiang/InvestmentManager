@@ -145,6 +145,7 @@
                 android:layout_weight="4"
                 android:orientation="vertical">
                 <Button
+                    android:id="@+id/btnFundManager"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:gravity="top|left"
@@ -152,6 +153,7 @@
                 
                 
                 <Button
+                    android:id="@+id/btnFundResearch"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:gravity="bottom|left"
@@ -166,12 +168,14 @@
                 android:orientation="vertical">
                 
                     <Button
+                        android:id="@+id/btnInvestmentManager"
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
                     android:text="我的投资管理" 
                     android:gravity="bottom|left"/>
                 
                     <Button
+                        android:id="@+id/btnInvestmentTool"
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
                     android:gravity="bottom|left"

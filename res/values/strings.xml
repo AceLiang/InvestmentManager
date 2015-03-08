@@ -5,4 +5,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- 资产管理 -->
+    <string name="lable_account_news">账户动态</string>
+    <string name="lable_account_manager">账户管理</string>
+    <string name="lable_account_rank">账户排行</string>
+    <string name="label_account_bounce">账户总收益</string>
+    <string name="label_week_bounce">周收益</string>
+    <string name="label_month_bounce">月收益</string>
+    <string name="label_all_bounce">总收益</string>
+    <string name="label_invest_bounce_rate">投资标的收益率</string>
 </resources>
