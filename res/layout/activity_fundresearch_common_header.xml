@@ -8,7 +8,7 @@
     android:paddingRight="20dp"
     android:paddingTop="20dp">
     
-    <com.app.client.investment.views.CircleImageView
+    <com.opensource.librarys.circleimageview.CircleImageView
 	     xmlns:app="http://schemas.android.com/apk/res-auto"
 	     android:id="@+id/activity_fundresearch_header_portrait"
 	     android:layout_width="70dp"
