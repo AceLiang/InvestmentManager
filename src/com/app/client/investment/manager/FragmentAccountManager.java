@@ -2,6 +2,7 @@ package com.app.client.investment.manager;
 
 import com.app.client.investment.R;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -67,7 +68,6 @@ public class FragmentAccountManager extends Fragment {
 		tableContent.setAdapter(adapter);
 		
 		
-		setListViewHeightBasedOnItems(tableContent);
 	}
 	
 	/**
@@ -86,7 +86,7 @@ public class FragmentAccountManager extends Fragment {
 	        // Get total height of all items.
 	        int totalItemsHeight = 0;
 	        for (int itemPos = 0; itemPos < numberOfItems; itemPos++) {
-	            View item = listAdapter.getView(itemPos, null, listView);
+	            View item = listAdapter.getView(itemPos, listView.getChildAt(itemPos), listView);
 	            item.measure(0, 0);
 	            totalItemsHeight += item.getMeasuredHeight();
 	        }
@@ -124,7 +124,7 @@ public class FragmentAccountManager extends Fragment {
 		@Override
 		public int getCount() {
 			// TODO Auto-generated method stub
-			return 3;
+			return 8;
 		}
 
 		@Override
@@ -160,14 +160,13 @@ public class FragmentAccountManager extends Fragment {
 					}else {
 						listClassarea.setVisibility(View.VISIBLE);
 					}
-					tableContent.requestLayout();
-					tableContent.getParent().requestLayout();
-					tableArea.requestLayout();
-					adapter.notifyDataSetChanged();
+					setListViewHeightBasedOnItems(tableContent);
 				}
 			});
 			return convertView;
 		}
 		
 	}
+	
+	
 }
