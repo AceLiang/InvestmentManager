@@ -3,6 +3,7 @@ package com.app.client.investment.manager;
 import java.util.ArrayList;
 
 import com.app.client.investment.R;
+import com.app.client.investment.utils.FakeDataFactory;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;

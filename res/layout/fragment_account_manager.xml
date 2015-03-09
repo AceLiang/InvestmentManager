@@ -1,12 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-        <TextView 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="账户管理"/>
+     >
 
-</LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/tableArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            >
+
+            <LinearLayout
+                android:id="@+id/tableHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/separator"
+                android:showDividers="middle"
+                android:orientation="horizontal" >
+                
+                <TextView 
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:text="序号"/>
+                
+                
+                <TextView 
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:padding="15dp"
+                    android:text="类别"/>
+                
+                
+                <TextView 
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:padding="15dp"
+                    android:text="账号名称"/>
+                
+                
+                <TextView 
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:padding="15dp"
+                    android:text="投资状态"/>
+                
+                
+                <TextView 
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:padding="15dp"
+                    android:text="可支配金额"/>
+                
+                
+                <TextView 
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#6da1c9"
+                    android:textColor="#FFFFFF"
+                    android:padding="15dp"
+                    android:text="单价"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/tableContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 >
+            </ListView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    
+    
+    <Button 
+        android:layout_below="@+id/tableArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加主账户"/>
+    <RelativeLayout 
+        android:id="@+id/emptyTable"
+        android:layout_below="@+id/tableArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="你还没有绑定任何账户"/>
+    </RelativeLayout>
+</RelativeLayout>

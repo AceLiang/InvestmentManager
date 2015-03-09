@@ -1,4 +1,4 @@
-package com.app.client.investment.views;
+package com.opensource.librarys.circleimageview;
 
 
 import com.app.client.investment.R;

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
+    
+    <!-- fund research -->
+    <color name="fundresearch_backgound">#EAEAEA</color>
+    <color name="fundresearch_company_title">#FF7F65</color>
 </resources>
