@@ -1,4 +1,4 @@
-package com.app.client.investment.manager;
+package com.app.client.investment.utils;
 
 import java.util.ArrayList;
 

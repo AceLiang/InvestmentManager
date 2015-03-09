@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.client.investment.R;
-import com.app.client.investment.manager.FakeDataFactory;
+import com.app.client.investment.utils.FakeDataFactory;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;

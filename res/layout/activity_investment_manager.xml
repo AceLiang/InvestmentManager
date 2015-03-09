@@ -1,26 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.app.FragmentTabHost
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/tabhost"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <LinearLayout
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+    
+    
+    
+    <ViewStub 
+        android:id="@+id/lazyView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"/>
 
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="fill_parent"
+    <!--
+    <RadioGroup
+        android:id="@+id/tabArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+		
+        <RadioButton 
+            android:id="@+id/rbAccountNews"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            />
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/lable_account_news"/>
+        
+        <RadioButton 
+            android:id="@+id/rbAccountManager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/lable_account_manager"/>
+        
+        
+        <RadioButton 
+            android:id="@+id/rbAccountRank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/lable_account_rank"/>
+	
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
+    </RadioGroup>
+      -->
+    <FrameLayout
+        android:id="@+id/contentArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-</android.support.v4.app.FragmentTabHost>
+</LinearLayout>
