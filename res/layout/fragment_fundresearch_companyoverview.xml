@@ -2,12 +2,186 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:paddingTop="5dp"
+    android:background="@color/fundresearch_backgound">
+	    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/fundresearch_company_title"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="公司介绍"/>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:textSize="12sp"
+        android:textColor="#5F5F5F"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="当一个产品拥有绝对优势的时候，就不需要粉丝天天宣扬优点来刷存在感了，因此你就根本感受不到粉的存在，然而事实上已经遍地是粉了。只有当一个产品比较火，影响力较大但存在争议时，我们才会看到粉与黑的对战，这时候就可以明显地感受到粉丝的存在。"/>
 
     <TextView 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="companyOverview"/>
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#DDDDDD"
+        android:textSize="14sp"
+        android:textColor="#343434"
+        android:text="自营账户"/>    
     
-
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/white">
+        <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="10dp"
+				    android:paddingBottom="10dp"
+		        android:orientation="horizontal">
+		        <TextView 
+				        android:layout_width="50dp"
+				        android:layout_height="wrap_content"	        				        
+				        android:textSize="12sp"
+				        android:layout_weight="1"
+				        android:textColor="#343434"
+				        android:gravity="left"
+				        android:text="代码  "/>
+		        <TextView 
+				        android:layout_width="100dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="3"
+				        android:textColor="#343434"
+				        android:gravity="left"
+				        android:text="基金名称 "/>
+		        <TextView 
+				        android:layout_width="50dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="0.5"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理天数"/>
+		        <TextView 
+				        android:layout_width="70dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="0.5"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理期业绩\n(%)"/>
+		        <TextView 
+				        android:layout_width="110dp"
+				        android:layout_height="wrap_content"	
+				        android:layout_weight="0.5"        
+				        android:textSize="12sp"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理期同类平均业绩\n(%)"/>		        
+		        
+		    </LinearLayout>
+		    
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fundresearch_backgound"/>
+        
+        <ListView 
+            android:id="@+id/fundresearch_company_selfAccount_listView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#DDDDDD"
+        android:textSize="14sp"
+        android:textColor="#343434"
+        android:text="聚贤账户"/>    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/white">
+        <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="10dp"
+				    android:paddingBottom="10dp"
+		        android:orientation="horizontal">
+		        <TextView 
+				        android:layout_width="50dp"
+				        android:layout_height="wrap_content"	        				        
+				        android:textSize="12sp"
+				        android:layout_weight="1"
+				        android:textColor="#343434"
+				        android:gravity="left"
+				        android:text="代码  "/>
+		        <TextView 
+				        android:layout_width="100dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="3"
+				        android:textColor="#343434"
+				        android:gravity="left"
+				        android:text="基金名称 "/>
+		        <TextView 
+				        android:layout_width="50dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="0.5"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理天数"/>
+		        <TextView 
+				        android:layout_width="70dp"
+				        android:layout_height="wrap_content"	        
+				        android:textSize="12sp"
+				        android:layout_weight="0.5"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理期业绩\n(%)"/>
+		        <TextView 
+				        android:layout_width="110dp"
+				        android:layout_height="wrap_content"	
+				        android:layout_weight="0.5"        
+				        android:textSize="12sp"
+				        android:textColor="#343434"
+				        android:gravity="right"
+				        android:text="管理期同类平均业绩\n(%)"/>		        
+		        
+		    </LinearLayout>
+		    
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fundresearch_backgound"/>
+        
+        <ListView 
+            android:id="@+id/fundresearch_company_otherAccount_listView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+    </LinearLayout>
 </LinearLayout>
