@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" 
-    android:paddingTop="5dp"
-    android:background="@color/fundresearch_backgound">
+    android:paddingTop="5dp">
 	    
     <TextView 
         android:layout_width="match_parent"
