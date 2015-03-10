@@ -8,12 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="我的投资业绩排行一览" />
+        android:text="我的投资业绩排行一览" 
+        android:background="#f0f0f0"
+        android:textColor="#aeaeae"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical" 
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,12 +26,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="全国收益排行:" />
+                android:text="全国收益排行:" 
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="235"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#EA6c59"
                 android:textSize="20sp" />
 
             <TextView
@@ -40,7 +47,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -51,17 +59,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="全国总资产排名:" />
+                    android:text="全国总资产排名:" 
+                    android:textSize="10sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="235"
+                    android:paddingLeft="10dp"
+                	android:paddingRight="10dp"
+                    android:textColor="#EA6c59"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="名" />
             </LinearLayout>
 
@@ -74,17 +87,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="风险控制排名:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="235"
+                    android:paddingLeft="10dp"
+                	android:paddingRight="10dp"
+                    android:textColor="#EA6c59"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="名" />
             </LinearLayout>
         </LinearLayout>
@@ -92,7 +110,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal" 
+            android:layout_marginTop="10dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -103,17 +122,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="上海排名:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="235"
+                    android:paddingLeft="10dp"
+                	android:paddingRight="10dp"
+                    android:textColor="#EA6c59"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="名" />
             </LinearLayout>
 
@@ -126,17 +150,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="上海总资产排名:" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="235"
+                    android:paddingLeft="10dp"
+                	android:paddingRight="10dp"
+                    android:textColor="#EA6c59"
                     android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textSize="10sp"
                     android:text="名" />
             </LinearLayout>
         </LinearLayout>
@@ -150,7 +179,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <LinearLayout
             android:layout_width="0dp"
@@ -162,11 +192,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#EA6c59"
                 android:text="1234" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
                 android:text="全国投资人" />
         </LinearLayout>
 
@@ -180,11 +214,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#EA6c59"
                 android:text="1234" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
                 android:text="上海投资人" />
         </LinearLayout>
 
@@ -198,11 +236,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234" />
+                android:textSize="10sp"
+                android:text="1234" 
+                android:textColor="#EA6c59"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
                 android:text="投资总金额(万元)" />
         </LinearLayout>
     </LinearLayout>

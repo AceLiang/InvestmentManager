@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <RelativeLayout 
+        android:id="@+id/topArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <Button 
+            android:id="@+id/btnAll"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="全部"/>
+        
+        <Button 
+            android:id="@+id/btnZhengQuan"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnAll"
+            android:text="证券"/>
+        
+        <Button 
+            android:id="@+id/btnQiHuo"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnZhengQuan"
+            android:text="期货"/>
+        
+        
+        <Button 
+            android:id="@+id/btnDaZong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="大众版"/>
+        <Button 
+            android:id="@+id/btnProfressnor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnDaZong"
+            android:text="专业版"/>
+        
+        
+        
+        
+    </RelativeLayout>
+    
+    <ListView 
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </ListView>
+
+</LinearLayout>

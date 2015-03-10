@@ -1,6 +1,7 @@
 package com.app.client.investment;
 
 
+import com.app.client.investment.fundmanager.FundManagerActivity;
 import com.app.client.investment.fundresearch.FundResearchActivity;
 import com.app.client.investment.manager.InvestmentManagerActivity;
 
@@ -63,7 +64,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btnFundManager:
-			
+			gotoFundManager();
 			break ;
 		case R.id.btnInvestmentManager:
 			gotoInvestmentManager();
@@ -78,6 +79,12 @@ public class MainActivity extends Activity implements OnClickListener{
 	}
 	
 	
+	private void gotoFundManager() {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent(this, FundManagerActivity.class);
+		startActivity(intent);
+	}
+
 	public void gotoInvestmentManager(){
 		Intent intent = new Intent(this, InvestmentManagerActivity.class);
 		startActivity(intent);
