@@ -2,10 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" 
-    android:layout_gravity="center_vertical"
+    android:gravity="center"
     android:paddingBottom="20dp"
-    android:paddingLeft="30dp"
-    android:paddingRight="20dp"
     android:paddingTop="20dp">
     
     <com.opensource.librarys.circleimageview.CircleImageView
@@ -22,7 +20,7 @@
         android:layout_width="wrap_content"
     	android:layout_height="wrap_content" 
     	android:layout_toRightOf="@id/activity_fundresearch_header_portrait"
-    	android:layout_marginLeft="20dp"
+    	android:layout_marginLeft="30dp"
     	android:textSize="20sp"
     	android:text="朱雀白石投资"/>
     

@@ -4,5 +4,9 @@
     
     <!-- fund research -->
     <color name="fundresearch_backgound">#EAEAEA</color>
+    <color name="fundresearch_nav_backgound">#FFFFFF</color>
+    <color name="fundresearch_nav_select_backgound">#6DA1C9</color>
+    <color name="fundresearch_nav_textColor">#000000</color>
+    <color name="fundresearch_nav_select_textColor">#FFFFFF</color>
     <color name="fundresearch_company_title">#FF7F65</color>
 </resources>

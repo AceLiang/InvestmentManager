@@ -37,6 +37,7 @@
 	            android:paddingBottom="10dp"
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:background="@color/white"   
 	            android:layout_margin="1dp"/>  
 	        <TextView   
@@ -53,16 +54,17 @@
 	    </TableRow>  
 	    <TableRow android:background="#DDDDDD">  
 	        <TextView   
-	            android:text="管理人\n "  
+	            android:text="管理人"  
 	            android:textSize="12sp"   
 	            android:paddingTop="10dp"
 	            android:paddingBottom="10dp" 
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
-	            android:text="深圳市好菜鸟投资管理\n有限公司"   
+	            android:text="深圳市好菜鸟投资管理有限公司"   
 	            android:textSize="12sp"   
 	            android:paddingTop="10dp"
 	            android:paddingBottom="10dp" 
@@ -71,17 +73,18 @@
 	            android:layout_weight="3"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
-	            android:text="托(保)管人\n "   
+	            android:text="托(保)管人"   
 	            android:textSize="12sp"   
 	            android:paddingTop="10dp"
 	            android:paddingBottom="10dp"  
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	            
 	        <TextView   
-	            android:text="国信证券/\n国信证券"   
+	            android:text="国信证券/国信证券"   
 	            android:textSize="12sp"   
 	            android:paddingTop="10dp"
 	            android:paddingBottom="10dp"  
@@ -98,6 +101,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_margin="1dp"/>  
 	        <TextView   
 	            android:text="55555"   
@@ -118,6 +122,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginTop="1dp"
 	            android:layout_marginBottom="1dp"
 	            android:layout_marginRight="1dp"/>  
@@ -142,6 +147,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
 	            android:text="55555"   
@@ -160,6 +166,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	            
 	        <TextView   
@@ -180,6 +187,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_margin="1dp"/>  
 	        <TextView   
 	            android:text="55555"   
@@ -200,6 +208,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginTop="1dp"
 	            android:layout_marginBottom="1dp"
 	            android:layout_marginRight="1dp"/>  
@@ -224,6 +233,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
 	            android:text="55555"   
@@ -242,6 +252,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	            
 	        <TextView   
@@ -262,6 +273,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_margin="1dp"/>  
 	        <TextView   
 	            android:text="22222"   
@@ -284,6 +296,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
 	            android:text="22222"   
@@ -304,6 +317,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_margin="1dp"/>  
 	        <TextView   
 	            android:text="22222"   
@@ -326,6 +340,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"/>  
 	        <TextView   
 	            android:text="22222"   
@@ -346,6 +361,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_margin="1dp"/>  
 	        <TextView   
 	            android:text="22222"   
@@ -368,6 +384,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"
 	            android:layout_marginBottom="1dp"/>  
 	        <TextView   
@@ -388,6 +405,7 @@
 	            android:background="@color/white"   
 	            android:paddingLeft="@dimen/activity_horizontal_margin"
 	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
 	            android:layout_marginRight="1dp"
 	            android:layout_marginBottom="1dp"/>  
 	            
