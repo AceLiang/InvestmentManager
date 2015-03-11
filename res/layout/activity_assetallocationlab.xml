@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+		    
+		    <LinearLayout 
+		        android:id="@+id/activity_assetAllocation_Lab_header"
+		        android:layout_width="match_parent"
+		        android:layout_height="150dp"
+		        android:background="@color/fundresearch_nav_select_backgound"
+		        android:orientation="vertical"
+		        android:gravity="center">        
+		        <ImageView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:src="@drawable/ic_launcher"/>   
+		        <TextView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="@color/white"
+		            android:textSize="20sp"
+		            android:text="资产配置实验室"/>
+		    </LinearLayout>    
+		    
+		    <TextView 
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:textColor="@color/white"
+		        android:textSize="16sp"
+		        android:background="@color/fundresearch_company_title"
+		        android:gravity="center"
+		        android:text="风险矩阵量化分析"/>
+		    
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="@dimen/activity_vertical_margin"
+		        android:orientation="vertical">
+		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:textSize="12sp"
+				        android:textColor="#5F5F5F"
+				        android:lineSpacingExtra="2dp"
+				        android:lineSpacingMultiplier="1.5"
+				        android:text="当一个产品拥有绝对优势的时候，就不需要粉丝天天宣扬优点来刷存在感了，因此你就根本感受不到粉的存在，然而事实上已经遍地是粉了。只有当一个产品比较火，影响力较大但存在争议时，我们才会看到粉与黑的对战，这时候就可以明显地感受到粉丝的存在。"/>
+		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		            android:textSize="14sp"
+		            android:textStyle="bold"
+		            android:text="对本金可亏损的容忍程度:"/>
+		        
+		        <LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+		            <EditText 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="2"/>
+		            <TextView 
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="1"
+		                android:text="  % (可承受亏损的百分比)"/>
+		        </LinearLayout>
+		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="60dp"
+		            android:layout_marginTop="10dp"
+		            android:background="#FFFFEE"
+		            android:textSize="14sp"
+		            android:textStyle="bold"
+		            android:gravity="center"
+		            android:text="您属于激进型投资人, 预计您的年化投资收益40-50%"/>
+		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:textSize="16sp"
+		            android:textStyle="bold"
+		            android:text="当前主要投资:"/>
+		        
+		        <TableLayout 
+		            android:layout_width="match_parent"  
+			    			android:layout_height="wrap_content"
+			    			android:paddingTop="10dp"
+			    			android:paddingBottom="10dp"
+			    			android:stretchColumns="*" >
+		            <TableRow 
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content">
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		            </TableRow>
+		            <TableRow 
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content">
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		            </TableRow>
+		        </TableLayout>  
+		        
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:textSize="16sp"
+		            android:textStyle="bold"
+		            android:text="你希望未来避免的投资工具:"/>
+		        
+		        <TableLayout 
+		            android:layout_width="match_parent"  
+			    			android:layout_height="wrap_content"
+			    			android:paddingTop="10dp"
+			    			android:paddingBottom="10dp"
+			    			android:stretchColumns="*" >
+		            <TableRow 
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content">
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		                <Button 
+		                    android:layout_width="wrap_content"  
+		            				android:layout_height="wrap_content"
+		            				android:text="one"/>
+		            </TableRow>
+		        </TableLayout>  
+		    </LinearLayout>
+				<Button 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@color/fundresearch_company_title"
+				    android:textColor="@color/white"
+				    android:text="开始计算"
+				    android:layout_gravity="bottom"
+				    android:onClick="toRisKAnalysis"/>
+		</LinearLayout>
+</ScrollView>

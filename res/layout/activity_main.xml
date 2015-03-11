@@ -227,6 +227,13 @@
                     android:layout_height="80dp"
                     android:gravity="bottom|left"
                     android:text="聚贤苑" />
+                
+                <Button
+                    android:id="@+id/btnAssetAllocationLab"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="bottom|left"
+                    android:text="资产配置实验室" />
         </LinearLayout>
     </LinearLayout>
 

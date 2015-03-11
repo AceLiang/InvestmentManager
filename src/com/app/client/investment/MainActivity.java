@@ -1,20 +1,19 @@
 package com.app.client.investment;
 
 
-import com.app.client.investment.fundmanager.FundManagerActivity;
-import com.app.client.investment.fundresearch.FundResearchActivity;
-import com.app.client.investment.manager.InvestmentManagerActivity;
-import com.app.client.investment.managertool.InvestmentManagerToolActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.app.client.investment.assetallocationlab.AssetAllocationLabActivity;
+import com.app.client.investment.fundmanager.FundManagerActivity;
+import com.app.client.investment.fundresearch.FundResearchActivity;
+import com.app.client.investment.manager.InvestmentManagerActivity;
+import com.app.client.investment.managertool.InvestmentManagerToolActivity;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
@@ -25,6 +24,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	private Button btnForum ;
 	private Button btnHelp ;
 	private Button btnJuxianyuan ;
+	private Button btnAssetAllocationLab;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		btnForum = (Button) findViewById(R.id.btnForum);
 		btnHelp = (Button) findViewById(R.id.btnHelp);
 		btnJuxianyuan = (Button) findViewById(R.id.btnJuxianyuan);
-		
+		btnAssetAllocationLab = (Button) findViewById(R.id.btnAssetAllocationLab);
 	}
 
 	private void initListener() {
@@ -60,6 +60,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		btnForum.setOnClickListener(this);
 		btnHelp.setOnClickListener(this);
 		btnJuxianyuan.setOnClickListener(this);
+		btnAssetAllocationLab.setOnClickListener(this);
 	}
 
 	private void initData() {
@@ -94,7 +95,9 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.btnJuxianyuan:
 			gotoJuxianyuan();
 			break ;
-
+		case R.id.btnAssetAllocationLab:
+			gotoAssetAllocationLab();
+			
 		default:
 			break;
 		}
@@ -132,6 +135,11 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	public void gotoFundResearch(){
 		Intent intent = new Intent(this, FundResearchActivity.class);
+		startActivity(intent);
+	}
+	
+	public void gotoAssetAllocationLab() {
+		Intent intent = new Intent(this, AssetAllocationLabActivity.class);
 		startActivity(intent);
 	}
 }
