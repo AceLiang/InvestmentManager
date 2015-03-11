@@ -40,6 +40,11 @@
             android:name="com.app.client.investment.fundmanager.FundManagerActivity"
             android:label="@string/app_name" >
         </activity>
+        
+        <activity
+            android:name="com.app.client.investment.managertool.InvestmentManagerToolActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

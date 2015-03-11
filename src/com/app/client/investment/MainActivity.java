@@ -4,6 +4,7 @@ package com.app.client.investment;
 import com.app.client.investment.fundmanager.FundManagerActivity;
 import com.app.client.investment.fundresearch.FundResearchActivity;
 import com.app.client.investment.manager.InvestmentManagerActivity;
+import com.app.client.investment.managertool.InvestmentManagerToolActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -72,12 +73,19 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.btnFundResearch:
 			gotoFundResearch();
 			break ;
+		case R.id.btnInvestmentTool:
+			gotoInvestmentTool();
+			break;
 
 		default:
 			break;
 		}
 	}
 	
+	public void gotoInvestmentTool(){
+		Intent intent = new Intent(this, InvestmentManagerToolActivity.class);
+		startActivity(intent);
+	}
 	
 	private void gotoFundManager() {
 		// TODO Auto-generated method stub
