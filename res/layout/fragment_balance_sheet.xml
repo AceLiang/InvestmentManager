@@ -1,12 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
-    <TextView 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="资产负债表"/>
+    android:padding="5dp" >
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <com.app.client.investment.views.VerticalTextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="资产合计" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tag1"
+                    android:orientation="vertical" >
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="资金余额:"
+                            android:gravity="right"/>
+                        
+                        <TextView 
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="资金可用数:"
+                            android:gravity="right"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="担保证券市值:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="应付款融资款:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                
+            <com.app.client.investment.views.VerticalTextView
+                android:id="@+id/tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="负债合计" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tag2"
+                android:orientation="vertical" >
+                
+                <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="融资息费:"
+                            android:gravity="right"/>
+                        
+                        <TextView 
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="应付款融券款:"
+                            android:gravity="right"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="融券息费:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="融券合计:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="总负债合计:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+            </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.app.client.investment.views.VerticalTextView
+                android:id="@+id/tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="资产负债状况" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tag3"
+                android:orientation="vertical" >
+            
+                <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="维持担保比例:"
+                            android:gravity="right"/>
+                        
+                        <TextView 
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="可取资产:"
+                            android:gravity="right"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="补仓金额:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="授信额度:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="融资授信额度:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="融资可用额度:"
+                            android:gravity="right"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="融券授信额度:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="融券可用额度:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView 
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="净资产:"
+                            />
+                        
+                        <TextView 
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7700"/>
+                    </LinearLayout>
+                    
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
