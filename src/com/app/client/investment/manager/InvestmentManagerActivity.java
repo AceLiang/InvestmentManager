@@ -26,7 +26,6 @@ public class InvestmentManagerActivity extends FragmentActivity implements OnChe
 	private RadioGroup tabArea ;
 	private FrameLayout contentArea ;
 	
-	private UserType userType = UserType.NORMAL;
 	
 	private FragmentManager fragmentManager ;
 	
@@ -46,11 +45,7 @@ public class InvestmentManagerActivity extends FragmentActivity implements OnChe
 		contentArea = (FrameLayout) findViewById(R.id.contentArea);
 		
 		fragmentManager = getSupportFragmentManager();
-		if (userType == UserType.NORMAL) {
-			buildNormalLayout();
-		}else {
-			
-		}
+		buildNormalLayout();
 		
 	}
 

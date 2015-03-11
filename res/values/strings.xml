@@ -14,4 +14,15 @@
     <string name="label_month_bounce">月收益</string>
     <string name="label_all_bounce">总收益</string>
     <string name="label_invest_bounce_rate">投资标的收益率</string>
+    
+    
+    <!-- 智能投资工具 -->
+    <string name="label_buy_in">买入</string>
+    <string name="label_Financing_buy_in">融资买入</string>
+    <string name="label_sale_out">卖出</string>
+    <string name="label_balance_sheet">资产负债表</string>
+    
+    <string name="label_chi_cang_query">持仓查询</string>
+    <string name="label_weituo_query">委托查询</string>
+    <string name="label_chengjiao_query">成交查询</string>
 </resources>
