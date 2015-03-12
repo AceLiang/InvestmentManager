@@ -1,4 +1,4 @@
-package com.app.client.investment.fundresearch;
+package com.app.client.investment.assetallocationlab;
 
 import java.util.List;
 
@@ -10,15 +10,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.app.client.investment.R;
+import com.app.client.investment.fundresearch.Account;
 import com.app.client.investment.utils.CollectionUtil;
 
-public class AccountAdapter extends BaseAdapter {
+public class FundItemAdapter extends BaseAdapter {
 
 	private Context mContext;
 	private LayoutInflater mInflater;
 	private List<Account> accountList;
 	
-	public AccountAdapter(Context c, List<Account> accountList) {
+	public FundItemAdapter(Context c, List<Account> accountList) {
 		this.mContext = c;
 		this.mInflater = LayoutInflater.from(c); 
 		this.accountList = accountList;
@@ -54,13 +55,13 @@ public class AccountAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
-		convertView = mInflater.inflate(R.layout.listview_fundresearch_company_account, null);
+		convertView = mInflater.inflate(R.layout.listview_risk_analysis_fund, null);
 
-		TextView textView1 = (TextView) convertView.findViewById(R.id.listView_fundresearch_company_account_text1);
-		TextView textView2 = (TextView) convertView.findViewById(R.id.listView_fundresearch_company_account_text2);
-		TextView textView3 = (TextView) convertView.findViewById(R.id.listView_fundresearch_company_account_text3);
-		TextView textView4 = (TextView) convertView.findViewById(R.id.listView_fundresearch_company_account_text4);
-		TextView textView5 = (TextView) convertView.findViewById(R.id.listView_fundresearch_company_account_text5);
+		TextView textView1 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text1);
+		TextView textView2 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text2);
+		TextView textView3 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text3);
+		TextView textView4 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text4);
+		TextView textView5 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text5);
 		
 		Account account = accountList.get(position);
 		textView1.setText(account.getCode());
