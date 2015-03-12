@@ -3,9 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <TextView 
-        android:layout_width="wrap_content"
+
+    <RadioGroup
+        android:id="@+id/tabBuyArea"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="买入"/>
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbNormalBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/label_buy_in"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbBatBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/label_bat_buy_in"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/buyArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabQueryArea"
+        android:background="#FF0000" >
+    </FrameLayout>
+
 </LinearLayout>
