@@ -61,14 +61,14 @@ public class FundItemAdapter extends BaseAdapter {
 		TextView textView2 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text2);
 		TextView textView3 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text3);
 		TextView textView4 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text4);
-		TextView textView5 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text5);
+		//TextView textView5 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text5);
 		
 		Account account = accountList.get(position);
 		textView1.setText(account.getCode());
 		textView2.setText(account.getName());
 		textView3.setText(account.getDay());
 		textView4.setText(account.getPerformance());
-		textView5.setText(account.getAvePerformance());
+		//textView5.setText(account.getAvePerformance());
 		
 		return convertView;
 	}
