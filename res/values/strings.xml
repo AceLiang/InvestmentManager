@@ -25,4 +25,5 @@
     <string name="label_chi_cang_query">持仓查询</string>
     <string name="label_weituo_query">委托查询</string>
     <string name="label_chengjiao_query">成交查询</string>
+    <string name="label_bat_buy_in">批量买入</string>
 </resources>
