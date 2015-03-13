@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res/com.app.client.investment">
+    android:layout_height="match_parent" 
+    >
     
     <LinearLayout 
         android:layout_width="match_parent"
@@ -356,51 +357,57 @@
 						    android:paddingBottom="10dp"
 				        android:orientation="horizontal">
 				        <TextView 
-						        android:layout_width="50dp"
-						        android:layout_height="wrap_content"	        				        
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"	
+						        android:minWidth="50dp"        				        
+						        android:textSize="12sp"
+						        android:textColor="#343434"
+						        android:gravity="left"
+						        android:text="代码 "/>
+				        <TextView 
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"	  
+						        android:minWidth="100dp"      
 						        android:textSize="12sp"
 						        android:layout_weight="1"
 						        android:textColor="#343434"
 						        android:gravity="left"
-						        android:text="代码  "/>
-				        <TextView 
-						        android:layout_width="100dp"
-						        android:layout_height="wrap_content"	        
-						        android:textSize="12sp"
-						        android:layout_weight="4"
-						        android:textColor="#343434"
-						        android:gravity="left"
 						        android:text="名称 "/>
 				        <TextView 
-						        android:layout_width="50dp"
-						        android:layout_height="wrap_content"	        
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"	  
+						        android:minWidth="50dp"        
 						        android:textSize="12sp"
-						        android:layout_weight="0.5"
 						        android:textColor="#343434"
-						        android:gravity="center"
+						        android:gravity="left"
 						        android:text="今年以来\n收益(%)"/>
 				        <TextView 
-						        android:layout_width="70dp"
-						        android:layout_height="wrap_content"	        
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"	   
+						        android:minWidth="50dp"       
 						        android:textSize="12sp"
-						        android:layout_weight="0.5"
 						        android:textColor="#343434"
-						        android:gravity="center"
+						        android:gravity="left"
 						        android:text="最大回撤\n(%)"/>
 				        <TextView 
-						        android:layout_width="100dp"
+						        android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"	
-						        android:layout_weight="2"        
+						        android:minWidth="80dp"         
 						        android:textSize="12sp"
 						        android:textColor="#343434"
 						        android:gravity="center"
 						        android:text="评级"/>		        
 				    </LinearLayout>
 				        
-		        <ListView 
+		        <LinearLayout 
+		            android:id="@+id/risk_analysis_linearLayout"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical" />
+		        <!-- <ListView 
 	            android:id="@+id/risk_analysis_listView"
 	            android:layout_width="match_parent"
-	            android:layout_height="300dp"/>
+	            android:layout_height="300dp"/> -->
 		    </LinearLayout>
     </LinearLayout>	
 </ScrollView>

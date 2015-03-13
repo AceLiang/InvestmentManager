@@ -100,10 +100,15 @@
             android:layout_height="1dp"
             android:background="@color/fundresearch_backgound"/>
         
-        <ListView 
+        <LinearLayout 
+            android:id="@+id/fundresearch_company_selfAccount_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <!-- <ListView 
             android:id="@+id/fundresearch_company_selfAccount_listView"
             android:layout_width="match_parent"
-            android:layout_height="120dp"/>
+            android:layout_height="120dp"/> -->
     </LinearLayout>
     
     <TextView 
@@ -177,9 +182,14 @@
             android:layout_height="1dp"
             android:background="@color/fundresearch_backgound"/>
         
-        <ListView 
+        <LinearLayout 
+            android:id="@+id/fundresearch_company_otherAccount_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <!-- <ListView 
             android:id="@+id/fundresearch_company_otherAccount_listView"
             android:layout_width="match_parent"
-            android:layout_height="120dp"/>
+            android:layout_height="120dp"/> -->
     </LinearLayout>
 </LinearLayout>
