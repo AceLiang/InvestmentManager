@@ -6,43 +6,106 @@
 		android:paddingBottom="5dp"
     android:orientation="horizontal" >
     
+    
     <TextView 
         android:id="@+id/listView_risk_analysis_fund_text1"
-	      android:layout_width="50dp"
-	      android:layout_height="wrap_content"	        				        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"	
+        android:minWidth="50dp"        				        
+        android:textSize="12sp"
+        android:textColor="#343434"
+        android:gravity="left"
+        android:text="代码 "/>
+     <TextView 
+         android:id="@+id/listView_risk_analysis_fund_text2"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"	  
+		     android:minWidth="100dp"    
+		     android:textSize="12sp"
+		     android:layout_weight="1"
+		     android:textColor="#343434"
+		     android:gravity="left"
+		     android:text="名称 "/>
+     <TextView 
+         android:id="@+id/listView_risk_analysis_fund_text3"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"	  
+	       android:minWidth="50dp"        
+	       android:textSize="12sp"
+	       android:textColor="#343434"
+	       android:gravity="left"
+	       android:text="今年以来\n收益(%)"/>
+     <TextView 
+         android:id="@+id/listView_risk_analysis_fund_text4"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"	   
+	       android:minWidth="50dp"       
+	       android:textSize="12sp"
+	       android:textColor="#343434"
+	       android:gravity="left"
+	       android:text="最大回撤\n(%)"/>
+     <LinearLayout 
+         android:layout_width="80dp"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         <RatingBar 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        style="?android:attr/ratingBarStyleSmall"
+	        android:numStars="5"/>
+     </LinearLayout>
+     
+    
+    <!-- <TextView 
+        android:id="@+id/listView_risk_analysis_fund_text1"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"	 
+	      android:minWidth="70dp"               				        
 	      android:textSize="12sp"
 	      android:layout_weight="1"
 	      android:textColor="#343434"
 	      android:gravity="left"/>
     <TextView 
         android:id="@+id/listView_risk_analysis_fund_text2"
-	      android:layout_width="100dp"
-	      android:layout_height="wrap_content"	        
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"	 
+	      android:minWidth="100dp" 
+	      android:maxWidth="150dp"          
 	      android:textSize="12sp"
 	      android:layout_weight="4"
 	      android:textColor="#343434"
+	      android:background="@color/fundresearch_nav_select_backgound"
 	      android:gravity="left"/>
     <TextView 
         android:id="@+id/listView_risk_analysis_fund_text3"
-	      android:layout_width="50dp"
-	      android:layout_height="wrap_content"	        
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"	    
+	      android:minWidth="50dp"     
 	      android:textSize="12sp"
 	      android:layout_weight="0.5"
 	      android:textColor="#343434"
-	      android:gravity="center"/>
+	      android:gravity="left"/>
     <TextView 
         android:id="@+id/listView_risk_analysis_fund_text4"
-	      android:layout_width="70dp"
-	      android:layout_height="wrap_content"	        
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"	      
+	      android:minWidth="50dp"  
 	      android:textSize="12sp"
 	      android:layout_weight="0.5"
 	      android:textColor="#343434"
-	      android:gravity="center"/>
-    <RatingBar 
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:gravity="center"
-          style="?android:attr/ratingBarStyleSmall"
-          android:numStars="5"/>
+	      android:gravity="left"/>
+
+        <RatingBar 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:minWidth="100dp"
+	        android:layout_weight="1"
+	        android:layout_gravity="center"
+	        android:gravity="left"
+	        style="?android:attr/ratingBarStyleSmall"
+	        android:numStars="5"/> -->
+
+    
 
 </LinearLayout>

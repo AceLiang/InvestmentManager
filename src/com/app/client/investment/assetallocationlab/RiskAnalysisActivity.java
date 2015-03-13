@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.app.client.investment.R;
 import com.app.client.investment.fundresearch.Account;
@@ -17,7 +21,8 @@ public class RiskAnalysisActivity extends Activity {
 	private RoundProgressBar pogressBar2;
 	private RoundProgressBar pogressBar3;
 	private RoundProgressBar pogressBar4;
-	private ListView riskAnalysisListView;
+	//private ListView riskAnalysisListView;
+	private LinearLayout riskAnalysisLinearLayout;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,10 @@ public class RiskAnalysisActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_risk_analysis);
 		
+		initView();
+	}
+	
+	public void initView() {
 		pogressBar1 = (RoundProgressBar)findViewById(R.id.progressBar1);
 		pogressBar1.setProgress(30);
 		
@@ -37,14 +46,31 @@ public class RiskAnalysisActivity extends Activity {
 		pogressBar4 = (RoundProgressBar)findViewById(R.id.progressBar4);
 		pogressBar4.setProgress(30);
 		
-		riskAnalysisListView = (ListView)findViewById(R.id.risk_analysis_listView);
-		FundItemAdapter adapter1 = new FundItemAdapter(this, getData());
-		riskAnalysisListView.setAdapter(adapter1);
+		riskAnalysisLinearLayout = (LinearLayout) findViewById(R.id.risk_analysis_linearLayout);
+		LayoutInflater inflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		for(Account account : getData()) {
+			View convertView = inflater.inflate(R.layout.listview_risk_analysis_fund, null);
 
+			TextView textView1 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text1);
+			TextView textView2 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text2);
+			TextView textView3 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text3);
+			TextView textView4 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text4);
+
+			textView1.setText(account.getCode());
+			textView2.setText(account.getName());
+			textView3.setText(account.getDay());
+			textView4.setText(account.getPerformance());
+			
+			riskAnalysisLinearLayout.addView(convertView);
+		}
+		/*riskAnalysisListView = (ListView)findViewById(R.id.risk_analysis_listView);
+		FundItemAdapter adapter1 = new FundItemAdapter(this, getData());
+		riskAnalysisListView.setAdapter(adapter1);*/
 	}
+	
 	public List<Account> getData() {
 		List<Account> accountList = new ArrayList<Account>();
-		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
+		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏµÄ¸£¸ÔµÄ·Ç¹Ù·½µØ·½·¨", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
