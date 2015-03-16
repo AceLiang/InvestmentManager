@@ -341,14 +341,11 @@
 		                </LinearLayout>
                 </LinearLayout>
             </TableRow>
-        </TableLayout>  
-        
-        
+        </TableLayout>                 
         
         <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:padding="@dimen/activity_vertical_margin"
 		        android:orientation="vertical">
 		        <LinearLayout 
 				        android:layout_width="match_parent"
@@ -359,9 +356,10 @@
 				        <TextView 
 						        android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"	
-						        android:minWidth="50dp"        				        
+						        android:minWidth="66dp"        				        
 						        android:textSize="12sp"
 						        android:textColor="#343434"
+						        android:paddingLeft="@dimen/activity_horizontal_margin"
 						        android:gravity="left"
 						        android:text="代码 "/>
 				        <TextView 
@@ -392,7 +390,8 @@
 				        <TextView 
 						        android:layout_width="wrap_content"
 						        android:layout_height="wrap_content"	
-						        android:minWidth="80dp"         
+						        android:paddingRight="@dimen/activity_horizontal_margin"
+						        android:minWidth="96dp"         
 						        android:textSize="12sp"
 						        android:textColor="#343434"
 						        android:gravity="center"
@@ -404,10 +403,25 @@
 		            android:layout_width="match_parent"
 		            android:layout_height="wrap_content"
 		            android:orientation="vertical" />
-		        <!-- <ListView 
-	            android:id="@+id/risk_analysis_listView"
-	            android:layout_width="match_parent"
-	            android:layout_height="300dp"/> -->
+
+		    </LinearLayout>
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="@dimen/activity_horizontal_margin"
+		        android:orientation="horizontal">
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="#F16B60"
+		            android:text="确认投资"/>
+		        <Button 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:background="#4486B7"
+		            android:text="仿真模拟投资"/>
 		    </LinearLayout>
     </LinearLayout>	
 </ScrollView>

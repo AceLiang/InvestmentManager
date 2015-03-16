@@ -61,18 +61,68 @@ public class RiskAnalysisActivity extends Activity {
 			textView3.setText(account.getDay());
 			textView4.setText(account.getPerformance());
 			
+			convertView.setBackgroundDrawable(getResources().getDrawable(R.drawable.listview_riskanalysis_selecter1));
 			riskAnalysisLinearLayout.addView(convertView);
+			
+			LinearLayout mlineLayout = new LinearLayout(this);
+			mlineLayout.setOrientation(LinearLayout.HORIZONTAL);
+			mlineLayout.setBackgroundColor(getResources().getColor(R.color.white));
+			LinearLayout.LayoutParams layoutForInner = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1);
+			mlineLayout.setLayoutParams(layoutForInner);
+			riskAnalysisLinearLayout.addView(mlineLayout);
 		}
-		/*riskAnalysisListView = (ListView)findViewById(R.id.risk_analysis_listView);
-		FundItemAdapter adapter1 = new FundItemAdapter(this, getData());
-		riskAnalysisListView.setAdapter(adapter1);*/
+
+		for(Account account : getData()) {
+			View convertView = inflater.inflate(R.layout.listview_risk_analysis_fund, null);
+
+			TextView textView1 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text1);
+			TextView textView2 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text2);
+			TextView textView3 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text3);
+			TextView textView4 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text4);
+
+			textView1.setText(account.getCode());
+			textView2.setText(account.getName());
+			textView3.setText(account.getDay());
+			textView4.setText(account.getPerformance());
+			
+			convertView.setBackgroundDrawable(getResources().getDrawable(R.drawable.listview_riskanalysis_selecter2));
+			riskAnalysisLinearLayout.addView(convertView);
+			
+			LinearLayout mlineLayout = new LinearLayout(this);
+			mlineLayout.setOrientation(LinearLayout.HORIZONTAL);
+			mlineLayout.setBackgroundColor(getResources().getColor(R.color.white));
+			LinearLayout.LayoutParams layoutForInner = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1);
+			mlineLayout.setLayoutParams(layoutForInner);
+			riskAnalysisLinearLayout.addView(mlineLayout);
+		}
+		
+		for(Account account : getData()) {
+			View convertView = inflater.inflate(R.layout.listview_risk_analysis_fund, null);
+
+			TextView textView1 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text1);
+			TextView textView2 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text2);
+			TextView textView3 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text3);
+			TextView textView4 = (TextView) convertView.findViewById(R.id.listView_risk_analysis_fund_text4);
+
+			textView1.setText(account.getCode());
+			textView2.setText(account.getName());
+			textView3.setText(account.getDay());
+			textView4.setText(account.getPerformance());
+			
+			convertView.setBackgroundDrawable(getResources().getDrawable(R.drawable.listview_riskanalysis_selecter3));
+			riskAnalysisLinearLayout.addView(convertView);
+			
+			LinearLayout mlineLayout = new LinearLayout(this);
+			mlineLayout.setOrientation(LinearLayout.HORIZONTAL);
+			mlineLayout.setBackgroundColor(getResources().getColor(R.color.white));
+			LinearLayout.LayoutParams layoutForInner = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1);
+			mlineLayout.setLayoutParams(layoutForInner);
+			riskAnalysisLinearLayout.addView(mlineLayout);
+		}
 	}
 	
 	public List<Account> getData() {
 		List<Account> accountList = new ArrayList<Account>();
-		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏµÄ¸£¸ÔµÄ·Ç¹Ù·½µØ·½·¨", "65", "5.6", "15.6"));
-		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
-		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));
 		accountList.add(new Account("00021", "±¦Ó¯ºËÐÄÓÎÏ·»ìºÏ", "65", "5.6", "15.6"));

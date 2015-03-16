@@ -2,16 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="5dp"
-		android:paddingBottom="5dp"
-    android:orientation="horizontal" >
+    android:paddingTop="@dimen/activity_horizontal_margin"
+		android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:orientation="horizontal"
+    android:clickable="true">
     
     
     <TextView 
         android:id="@+id/listView_risk_analysis_fund_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"	
-        android:minWidth="50dp"        				        
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:minWidth="66dp"        				        
         android:textSize="12sp"
         android:textColor="#343434"
         android:gravity="left"
@@ -45,8 +47,9 @@
 	       android:gravity="left"
 	       android:text="最大回撤\n(%)"/>
      <LinearLayout 
-         android:layout_width="80dp"
+         android:layout_width="96dp"
          android:layout_height="wrap_content"
+         android:paddingRight="@dimen/activity_horizontal_margin"
          android:orientation="vertical">
          <RatingBar 
 	        android:layout_width="wrap_content"
@@ -55,57 +58,5 @@
 	        style="?android:attr/ratingBarStyleSmall"
 	        android:numStars="5"/>
      </LinearLayout>
-     
-    
-    <!-- <TextView 
-        android:id="@+id/listView_risk_analysis_fund_text1"
-	      android:layout_width="wrap_content"
-	      android:layout_height="wrap_content"	 
-	      android:minWidth="70dp"               				        
-	      android:textSize="12sp"
-	      android:layout_weight="1"
-	      android:textColor="#343434"
-	      android:gravity="left"/>
-    <TextView 
-        android:id="@+id/listView_risk_analysis_fund_text2"
-	      android:layout_width="wrap_content"
-	      android:layout_height="wrap_content"	 
-	      android:minWidth="100dp" 
-	      android:maxWidth="150dp"          
-	      android:textSize="12sp"
-	      android:layout_weight="4"
-	      android:textColor="#343434"
-	      android:background="@color/fundresearch_nav_select_backgound"
-	      android:gravity="left"/>
-    <TextView 
-        android:id="@+id/listView_risk_analysis_fund_text3"
-	      android:layout_width="wrap_content"
-	      android:layout_height="wrap_content"	    
-	      android:minWidth="50dp"     
-	      android:textSize="12sp"
-	      android:layout_weight="0.5"
-	      android:textColor="#343434"
-	      android:gravity="left"/>
-    <TextView 
-        android:id="@+id/listView_risk_analysis_fund_text4"
-	      android:layout_width="wrap_content"
-	      android:layout_height="wrap_content"	      
-	      android:minWidth="50dp"  
-	      android:textSize="12sp"
-	      android:layout_weight="0.5"
-	      android:textColor="#343434"
-	      android:gravity="left"/>
-
-        <RatingBar 
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:minWidth="100dp"
-	        android:layout_weight="1"
-	        android:layout_gravity="center"
-	        android:gravity="left"
-	        style="?android:attr/ratingBarStyleSmall"
-	        android:numStars="5"/> -->
-
-    
 
 </LinearLayout>

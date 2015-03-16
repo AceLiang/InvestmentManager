@@ -9,4 +9,12 @@
     <color name="fundresearch_nav_textColor">#000000</color>
     <color name="fundresearch_nav_select_textColor">#FFFFFF</color>
     <color name="fundresearch_company_title">#FF7F65</color>
+    
+    <!-- riskanalysis -->
+    <color name="activated_background_riskanalysis_listView1">#E1ECF4</color>
+    <color name="pressed_background_riskanalysis_listView1">#6DA1C9</color>
+    <color name="activated_background_riskanalysis_listView2">#FFF8F0</color>
+    <color name="pressed_background_riskanalysis_listView2">#FFB973</color>
+    <color name="activated_background_riskanalysis_listView3">#FDEBEA</color>
+    <color name="pressed_background_riskanalysis_listView3">#F16B60</color>
 </resources>
