@@ -17,45 +17,45 @@
 	        <TextView 
 	            android:id="@+id/fundresearch_performance_text1"
 	            android:layout_width="wrap_content"
-	       	 	android:layout_height="wrap_content"
-	       	 	android:layout_alignParentTop="true"
-	       	 	android:layout_alignParentLeft="true"
-	       	 	android:textSize="18sp"
-	       	 	android:text="1.6240"/>
+		       	 	android:layout_height="wrap_content"
+		       	 	android:layout_alignParentTop="true"
+		       	 	android:layout_alignParentLeft="true"
+		       	 	android:textSize="18sp"
+		       	 	android:text="1.6240"/>
 	        
 	        <TextView 
 	            android:id="@+id/fundresearch_performance_text2"
 	            android:layout_width="wrap_content"
-	       	 	android:layout_height="wrap_content"
-	       	 	android:layout_toRightOf="@id/fundresearch_performance_text1"
-	       	 	android:layout_alignBottom="@id/fundresearch_performance_text1"
-	       	 	android:textSize="14sp"
-	       	 	android:gravity="bottom"
-	       	 	android:text="  -0.0003(-0.0003%)"/>
+		       	 	android:layout_height="wrap_content"
+		       	 	android:layout_toRightOf="@id/fundresearch_performance_text1"
+		       	 	android:layout_alignBottom="@id/fundresearch_performance_text1"
+		       	 	android:textSize="14sp"
+		       	 	android:gravity="bottom"
+		       	 	android:text="  -0.0003(-0.0003%)"/>
 	        
 	        <Spinner 
 	            android:id="@+id/fundresearch_performance_spinner1"
 	            android:layout_width="wrap_content"
-	       	 	android:layout_height="wrap_content"
-	       	 	android:layout_alignParentTop="true"
-	       	 	android:layout_alignParentRight="true"/>
+		       	 	android:layout_height="wrap_content"
+		       	 	android:layout_alignParentTop="true"
+		       	 	android:layout_alignParentRight="true"/>
 	        
 	        <TextView 
 	            android:id="@+id/fundresearch_performance_text3"
 	            android:layout_width="wrap_content"
-	       	 	android:layout_height="wrap_content"
-	       	 	android:layout_alignLeft="@id/fundresearch_performance_text1"
-	       	 	android:layout_below="@id/fundresearch_performance_text1" 
-	       	 	android:textSize="12sp"
-	       	 	android:text="更新于: 2014-12-30"/>
+		       	 	android:layout_height="wrap_content"
+		       	 	android:layout_alignLeft="@id/fundresearch_performance_text1"
+		       	 	android:layout_below="@id/fundresearch_performance_text1" 
+		       	 	android:textSize="12sp"
+		       	 	android:text="更新于: 2014-12-30"/>
 	        
 	    </RelativeLayout>
 	    
 	    <com.github.mikephil.charting.charts.PieChart
-	     	android:id="@+id/fundresearch_performance_piechartView"
-	     	android:layout_gravity="center_horizontal"
-	     	android:layout_width="350dp"
-	     	android:layout_height="350dp"/>
+		     	android:id="@+id/fundresearch_performance_piechartView"
+		     	android:layout_gravity="center_horizontal"
+		     	android:layout_width="match_parent"
+		     	android:layout_height="350dp"/>
 		</LinearLayout>
 	
     <LinearLayout
@@ -66,6 +66,7 @@
            android:orientation="horizontal"
            android:paddingTop="10dp"
            android:paddingBottom="10dp"
+           android:baselineAligned="false"
            android:showDividers="middle" >
 
            <LinearLayout

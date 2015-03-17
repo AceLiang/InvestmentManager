@@ -16,7 +16,7 @@
 	        android:orientation="horizontal">
             
             <RelativeLayout 
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1">
@@ -84,7 +84,7 @@
 	               		android:text="分"/>
             </RelativeLayout>
             <LinearLayout 
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal">
@@ -130,7 +130,7 @@
                 android:paddingTop="10dp"
                 android:orientation="horizontal">
                 <LinearLayout 
-	                android:layout_width="wrap_content"
+	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
 	                android:orientation="vertical">
@@ -155,7 +155,7 @@
 		                android:text="中性对冲类收益率"/>
 	            </LinearLayout>
 	            <LinearLayout 
-	                android:layout_width="wrap_content"
+	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
 	                android:orientation="vertical">
@@ -180,7 +180,7 @@
 		                android:text="中性对冲类收益率"/>
 	            </LinearLayout>
 	            <LinearLayout 
-	                android:layout_width="wrap_content"
+	                android:layout_width="0dp"
 	                android:layout_height="wrap_content"
 	                android:layout_weight="1"
 	                android:orientation="vertical">
@@ -225,7 +225,7 @@
           					android:layout_height="wrap_content"
           					android:orientation="horizontal">
                     <LinearLayout 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
             						android:layout_height="50dp"
             						android:layout_weight="1"   
             						android:gravity="center"  
@@ -244,7 +244,7 @@
 			                    android:text="股票中性对冲类"/> 
 		                </LinearLayout>
 		                <LinearLayout 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
             						android:layout_height="50dp"
             						android:layout_weight="1" >
 				                <com.opensource.librarys.roundprogressbar.RoundProgressBar 
@@ -265,7 +265,7 @@
           						android:layout_height="wrap_content"
           						android:orientation="horizontal">
                     <LinearLayout 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
             						android:layout_height="50dp"
             						android:layout_weight="1"   
             						android:gravity="center"    
@@ -284,7 +284,7 @@
 			                    android:text="股票程序化类"/> 
 		                </LinearLayout>
 		                <LinearLayout 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
             						android:layout_height="50dp"
             						android:layout_weight="1" >
 				                <com.opensource.librarys.roundprogressbar.RoundProgressBar 
@@ -302,14 +302,14 @@
                 </LinearLayout>
                 <LinearLayout 
                     android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:orientation="horizontal">
+										android:layout_height="wrap_content"
+										android:orientation="horizontal">
                     <LinearLayout 
-                        android:layout_width="wrap_content"
-   						android:layout_height="50dp"
-   						android:layout_weight="1"     
-   						android:gravity="center"  
-   						android:orientation="vertical">
+                        android:layout_width="0dp"
+   											android:layout_height="50dp"
+   											android:layout_weight="1"     
+   											android:gravity="center"  
+   											android:orientation="vertical">
                     		<TextView 
 			                    android:layout_width="wrap_content"
 			                    android:layout_height="wrap_content"
@@ -324,7 +324,7 @@
 			                    android:text="股票主观交易类"/> 
 		                </LinearLayout>
 		                <LinearLayout 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
             						android:layout_height="50dp"
             						android:layout_weight="1" >
 				                <com.opensource.librarys.roundprogressbar.RoundProgressBar 
@@ -363,7 +363,7 @@
 						        android:gravity="left"
 						        android:text="代码 "/>
 				        <TextView 
-						        android:layout_width="wrap_content"
+						        android:layout_width="0dp"
 						        android:layout_height="wrap_content"	  
 						        android:minWidth="100dp"      
 						        android:textSize="12sp"
@@ -411,13 +411,13 @@
 		        android:paddingTop="@dimen/activity_horizontal_margin"
 		        android:orientation="horizontal">
 		        <Button 
-		            android:layout_width="wrap_content"
+		            android:layout_width="0dp"
 		            android:layout_height="wrap_content"
 		            android:layout_weight="1"
 		            android:background="#F16B60"
 		            android:text="确认投资"/>
 		        <Button 
-		            android:layout_width="wrap_content"
+		            android:layout_width="0dp"
 		            android:layout_height="wrap_content"
 		            android:layout_weight="1"
 		            android:background="#4486B7"
