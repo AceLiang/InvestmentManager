@@ -3,9 +3,12 @@ package com.app.client.investment.protocol;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.http.AndroidHttpClient;
 import android.os.Build;
 import android.support.v4.util.LruCache;
 
@@ -67,7 +70,14 @@ public class BaseProtocolManager {
 			stack = new HurlStack() ;
 		} else {
 		    // ...use AndroidHttpClient for stack.
-			stack = new HttpClientStack(new DefaultHttpClient());
+			String userAgent = "volley/0";
+	        try {
+	            String packageName = context.getPackageName();
+	            PackageInfo info = context.getPackageManager().getPackageInfo(packageName, 0);
+	            userAgent = packageName + "/" + info.versionCode;
+	        } catch (NameNotFoundException e) {
+	        }
+			stack = new HttpClientStack(AndroidHttpClient.newInstance(userAgent));
 		}
 		
 		// Instantiate the cache
