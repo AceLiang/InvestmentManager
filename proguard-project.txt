@@ -11,6 +11,26 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+-optimizationpasses 5                                                           # 指定代码的压缩级别
+-dontusemixedcaseclassnames                                                     # 是否使用大小写混合
+-dontskipnonpubliclibraryclasses                                                # 是否混淆第三方jar
+-dontpreverify                                                                  # 混淆时是否做预校验
+-keepattributes SourceFile,LineNumberTable										# 混淆号错误信息里带上代码行
+-verbose                                                                        # 混淆时是否记录日志
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*        # 混淆时所采用的算法
+
+
+#不进行混淆保持原样   
+-keep public class * extends android.app.Activity   
+-keep public class * extends android.app.Application   
+-keep public class * extends android.app.Service   
+-keep public class * extends android.content.BroadcastReceiver   
+-keep public class * extends android.content.ContentProvider   
+-keep public class * extends android.app.backup.BackupAgentHelper   
+-keep public class * extends android.preference.Preference   
+-keep public class com.android.vending.licensing.ILicensingService   
+-keepattributes *Annotation*
+-keepattributes JavascriptInterface
 
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
@@ -18,3 +38,79 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+ #不进行混淆自定义view
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+ 
+ 
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+ 
+ 
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+ 
+ 
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+#不进行混淆第三方jar包
+-libraryjars   libs/android-support-v4.jar
+
+-libraryjars   libs/volley.jar
+
+-libraryjars   libs/guice-3.0-no_aop.jar
+-libraryjars   libs/roboguice-2.0.jar
+-libraryjars   libs/javax.inject-1.jar
+
+-libraryjars   libs/jsr305-1.3.9.jar
+-libraryjars   libs/ormlite-android-4.48.jar
+-libraryjars   libs/ormlite-core-4.48.jar
+
+-libraryjars   libs/mpandroidchartlibrary-2-0-7.jar
+
+#不进行混淆android-support-v4
+-dontwarn android.support.v4.**     
+-keep class android.support.v4.** { *; }   
+-keep interface android.support.v4.app.** { *; }   
+-keep public class * extends android.support.v4.**   
+-keep public class * extends android.app.Fragment 
+
+#不进行混淆volley
+-dontwarn com.android.volley.** 
+-keep public class com.android.volley.** {*;} 
+
+#不进行混淆roboguice
+-keepattributes *Annotation*
+-keep public class roboguice.** {*;} 
+# if not using Google Maps library, safe to ignore these
+-dontwarn roboguice.activity.RoboMapActivity
+# safe to ignore testing classes, when proguard not being run against an instrumentation testing app
+-dontwarn roboguice.test.**
+
+-keep class com.google.inject.** { *; } 
+-keepclassmembers class * {
+    @com.google.inject.Inject <fields>;
+    @com.google.inject.Inject <init>(...);
+}
+-keep class javax.inject.** { *; } 
+-keep class javax.annotation.** { *; } 
+#不进行混淆ormlite
+-keep class com.j256.ormlite.**{ *; } 
+#不进行混淆mpandroid
+-keep class com.github.mikephil.**{ *; } 
