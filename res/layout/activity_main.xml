@@ -33,19 +33,14 @@
                 app:border_width="2dp" />
             
 
-            <Button
-                android:id="@+id/btnFollow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="Follow" />
+
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
+                android:background="#4daec5"
                 android:layout_toRightOf="@+id/head_portrait"
                 android:orientation="vertical" >
 
@@ -54,22 +49,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sun flower"
-                    android:textColor="#000000" />
+                    android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:id="@+id/tag"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="sunny girl"
-                    android:textColor="#d0d0d0" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <LinearLayout
+                        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#4daec5"
             android:divider="@drawable/separator"
             android:orientation="horizontal"
             android:padding="10dp"
@@ -115,31 +99,19 @@
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="256"
-                    android:textColor="#FFFFFF" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Weibo"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
         </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             
             <LinearLayout 

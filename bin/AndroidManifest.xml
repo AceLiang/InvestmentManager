@@ -17,11 +17,6 @@
         <activity
             android:name="com.app.client.investment.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.app.client.investment.manager.InvestmentManagerActivity"
@@ -55,6 +50,16 @@
         <activity
             android:name="com.app.client.investment.assetallocationlab.RiskAnalysisActivity"
             android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name="com.app.client.investment.LoginActivity"
+            android:label="@string/app_name" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         
         <!-- <activity
