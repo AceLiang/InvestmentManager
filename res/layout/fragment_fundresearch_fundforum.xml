@@ -7,6 +7,45 @@
     <TextView 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="fundForum"/>
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/fundresearch_company_title"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="朱雀白石投资论坛"/>
+    
+    <ListView 
+        android:id="@+id/fundresearch_fund_forum_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上一页"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="第一页"/>
+        
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下一页"/>
+        
+    </LinearLayout>
 </LinearLayout>

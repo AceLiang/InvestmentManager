@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp" 
+    android:padding="@dimen/activity_horizontal_margin">
+    
+    <TextView 
+        android:id="@+id/fund_form_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"
+        android:text="【回馈米粉】首批30万老用户 小米Note专场"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@id/fund_form_item_title">
+    
+	    <TextView 
+	        android:id="@+id/fund_form_item_reply_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="回帖："/>
+	    
+	    <TextView 
+	        android:id="@+id/fund_form_item_reply_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="333"/>
+	    
+	    <TextView 
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:background="@android:color/darker_gray"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+	    
+	    <TextView 
+	        android:id="@+id/fund_form_item_see_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="查看："/>
+	    
+	    <TextView 
+	        android:id="@+id/fund_form_item_see_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="23434"/>
+	    
+	    <TextView 
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:background="@android:color/darker_gray"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+	    
+	    <TextView 
+	        android:id="@+id/fund_form_item_praise_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="赞："/>
+	
+	    <TextView 
+	        android:id="@+id/fund_form_item_praise_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="4545"/>
+    
+    </LinearLayout>
+    
+    <com.opensource.librarys.circleimageview.CircleImageView
+	     xmlns:app="http://schemas.android.com/apk/res-auto"
+	     android:id="@+id/fund_form_account_portrait"
+	     android:layout_width="50dp"
+	     android:layout_height="50dp"
+	     android:layout_alignParentTop="true"
+	     android:layout_alignParentRight="true"
+	     android:src="@drawable/ic_launcher"
+	     app:border_color="#68c1d3"
+	     app:border_width="2dp" />
+    
+    <TextView 
+        android:id="@+id/fund_form_item_account_name"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@id/fund_form_account_portrait"
+        android:gravity="center"
+        android:text="Chris"/>
+</RelativeLayout>
