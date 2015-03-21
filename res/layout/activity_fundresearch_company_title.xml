@@ -8,7 +8,6 @@
     <TextView 
       android:layout_width="50dp"
       android:layout_height="wrap_content"	        				        
-      android:textSize="12sp"
       android:layout_weight="1"
       android:textColor="#343434"
       android:gravity="left"
@@ -16,7 +15,6 @@
     <TextView 
       android:layout_width="100dp"
       android:layout_height="wrap_content"	        
-      android:textSize="12sp"
       android:layout_weight="3"
       android:textColor="#343434"
       android:gravity="left"
@@ -24,7 +22,6 @@
     <TextView 
       android:layout_width="50dp"
       android:layout_height="wrap_content"	        
-      android:textSize="12sp"
       android:layout_weight="0.5"
       android:textColor="#343434"
       android:gravity="right"
@@ -32,7 +29,6 @@
     <TextView 
       android:layout_width="70dp"
       android:layout_height="wrap_content"	        
-      android:textSize="12sp"
       android:layout_weight="0.5"
       android:textColor="#343434"
       android:gravity="right"
@@ -41,7 +37,6 @@
       android:layout_width="110dp"
       android:layout_height="wrap_content"	
       android:layout_weight="0.5"        
-      android:textSize="12sp"
       android:textColor="#343434"
       android:gravity="right"
       android:text="管理期同类平均业绩\n(%)"/>		        
