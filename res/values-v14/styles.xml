@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme for API 14+. This theme completely replaces
@@ -9,11 +9,15 @@
 
         <!-- API 14 theme customizations can go here. -->
         <item name="android:textViewStyle">@style/DefaultTextView</item>
+        <item name="android:buttonStyle">@style/DefaultButton</item>
     </style>
 
     <style name="DefaultTextView" parent="android:Widget.TextView">
         <item name="android:textSize">10sp</item>
     </style>
     
-
+	<style name="DefaultButton" parent="android:Widget.Button">
+        <item name="android:textSize">10sp</item>
+    </style>
+    
 </resources>
