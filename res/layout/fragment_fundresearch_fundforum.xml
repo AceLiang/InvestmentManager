@@ -19,11 +19,12 @@
     <ListView 
         android:id="@+id/fundresearch_fund_forum_ListView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+       	android:layout_height="wrap_content"/>
 
     <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:padding="@dimen/activity_vertical_margin"
         android:orientation="horizontal">
         
