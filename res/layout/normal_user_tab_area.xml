@@ -13,7 +13,7 @@
         android:button="@null"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/lable_account_news" />
+        android:text="@string/label_account_news" />
 
     <RadioButton
         android:id="@+id/rbAccountManager"
@@ -23,7 +23,7 @@
         android:button="@null"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/lable_account_manager" />
+        android:text="@string/label_account_manager" />
 
     <RadioButton
         android:id="@+id/rbAccountRank"
@@ -33,6 +33,6 @@
         android:button="@null"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/lable_account_rank" />
+        android:text="@string/label_account_rank" />
 
 </RadioGroup>

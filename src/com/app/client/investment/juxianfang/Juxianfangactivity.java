@@ -1,15 +1,13 @@
 package com.app.client.investment.juxianfang;
 
-import com.app.client.investment.R;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.RelativeLayout;
+
+import com.app.client.investment.R;
 
 public class Juxianfangactivity extends FragmentActivity implements OnCheckedChangeListener{
 

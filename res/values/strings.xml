@@ -6,9 +6,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- 资产管理 -->
-    <string name="lable_account_news">账户动态</string>
-    <string name="lable_account_manager">账户管理</string>
-    <string name="lable_account_rank">账户排行</string>
+    <string name="label_account_news">账户动态</string>
+    <string name="label_account_manager">账户管理</string>
+    <string name="label_account_rank">账户排行</string>
     <string name="label_account_bounce">账户总收益</string>
     <string name="label_week_bounce">周收益</string>
     <string name="label_month_bounce">月收益</string>
@@ -26,4 +26,18 @@
     <string name="label_weituo_query">委托查询</string>
     <string name="label_chengjiao_query">成交查询</string>
     <string name="label_bat_buy_in">批量买入</string>
+    
+    <!-- 聚贤论坛 -->
+    <string name="juxianlutan_name">聚贤论坛</string>
+    <string name="label_today">今日</string>
+    <string name="label_yesterday">昨日</string>
+    <string name="label_posts">帖子</string>
+    <string name="label_forum_classify">论坛分类</string>
+    <string name="label_forum_hotspot">论坛热点</string>
+    <string name="label_forum_module1">基金论坛</string>
+    <string name="label_forum_module2">基金论坛</string>
+    <string name="label_forum_module3">论坛板块</string>
+    
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>
