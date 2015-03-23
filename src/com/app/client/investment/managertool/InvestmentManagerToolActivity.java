@@ -37,6 +37,9 @@ public class InvestmentManagerToolActivity extends FragmentActivity implements O
 	private FragmentChiCangQuery fragmentChiCangQuery ;
 	private FragmentWeituoQuery fragmentWeituoQuery ;
 	private FragmentChengJiaoQuery fragmentChengJiaoQuery ;
+	
+	
+	Object data ;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -73,7 +76,6 @@ public class InvestmentManagerToolActivity extends FragmentActivity implements O
 		fragmentFinancingBuyin = new FragmentFinancingBuyin();
 		fragmentSaleOut = new FragmentSaleOut();
 		fragmentBalanceSheet = new FragmentBalanceSheet();
-		
 		
 		fragmentChengJiaoQuery = new FragmentChengJiaoQuery();
 		fragmentChiCangQuery = new FragmentChiCangQuery();

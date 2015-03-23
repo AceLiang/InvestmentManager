@@ -6,13 +6,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.RelativeLayout;
 
 public class Juxianfangactivity extends FragmentActivity implements OnCheckedChangeListener{
 
-	RelativeLayout content ;
+	FrameLayout content ;
 	
 	RadioGroup tabButtomArea ;
 	FragmentManager fragmentManager;
@@ -31,7 +32,7 @@ public class Juxianfangactivity extends FragmentActivity implements OnCheckedCha
 	}
 	private void initViews() {
 		// TODO Auto-generated method stub
-		content = (RelativeLayout) findViewById(R.id.content);
+		content = (FrameLayout) findViewById(R.id.content);
 		tabButtomArea = (RadioGroup) findViewById(R.id.tabButtomArea);
 	}
 	private void initListener() {
