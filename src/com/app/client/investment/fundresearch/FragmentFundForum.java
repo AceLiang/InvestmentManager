@@ -30,7 +30,7 @@ public class FragmentFundForum extends Fragment {
 	
 	public void initView(View view) {
 		listView = (ListView) view.findViewById(R.id.fundresearch_fund_forum_ListView);
-		FakeListViewAdapter adapter = new FakeListViewAdapter(getActivity(), R.layout.listview_fund_form, 100);
+		FakeListViewAdapter adapter = new FakeListViewAdapter(getActivity(), R.layout.listview_fund_form, 5);
 		listView.setAdapter(adapter);
 		ViewUtils.enableListViewinScrollerView(listView);
 	}
