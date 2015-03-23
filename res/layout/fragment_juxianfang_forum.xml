@@ -97,60 +97,50 @@
 		            android:id="@+id/forum_nav_classify"
 		            android:layout_width="wrap_content"
 		            android:layout_height="match_parent"
-		            android:layout_weight="1"
-		            android:textSize="14sp"
+		            android:layout_weight="1"		            
 		            android:text="@string/label_forum_classify"
 		            android:gravity="center"
-		            android:clickable="true"
-		            android:onClick="showPerformance"/>
+		            android:clickable="true"/>
 		        
 		        <TextView 
 		            android:id="@+id/forum_nav_hotspot"
 		            android:layout_width="wrap_content"
 		            android:layout_height="match_parent"
-		            android:layout_weight="1"
-		            android:textSize="14sp"
+		            android:layout_weight="1"		            
 		            android:gravity="center"
 		            android:clickable="true"
-		            android:text="@string/label_forum_hotspot"
-		            android:onClick="showFundOverview"/>
+		            android:text="@string/label_forum_hotspot"/>
 		        
 		        <TextView 
 		            android:id="@+id/forum_nav_module1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="match_parent"
-		            android:layout_weight="1"
-		            android:textSize="14sp"
+		            android:layout_weight="1"	            
 		            android:gravity="center"
 		            android:clickable="true"
-		            android:text="@string/label_forum_module1"
-		            android:onClick="showFundForum"/>
+		            android:text="@string/label_forum_module1"/>
 		        
 		        <TextView 
 		            android:id="@+id/forum_nav_module2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="match_parent"
-		            android:layout_weight="1"
-		            android:textSize="14sp"
+		            android:layout_weight="1"	            
 		            android:gravity="center"
 		            android:clickable="true"
-		            android:text="@string/label_forum_module2"
-		            android:onClick="showCompanyOverview"/>
+		            android:text="@string/label_forum_module2"/>
 		        
 		        <TextView 
 		            android:id="@+id/forum_nav_module3"
 		            android:layout_width="wrap_content"
 		            android:layout_height="match_parent"
-		            android:layout_weight="1"
-		            android:textSize="14sp"
+		            android:layout_weight="1"		            
 		            android:gravity="center"
 		            android:clickable="true"
-		            android:text="@string/label_forum_module3"
-		            android:onClick="showCompanyOverview"/>
+		            android:text="@string/label_forum_module3"/>
 		        
 		        <ImageView 
-			          android:layout_width="50dp"
-			          android:layout_height="50dp"
+			          android:layout_width="wrap_content"
+			          android:layout_height="wrap_content"
 			          android:gravity="center"
 			          android:src="@drawable/ic_launcher"/>
 		    </LinearLayout>
@@ -169,8 +159,56 @@
      		android:orientation="vertical"
      		android:background="#FFFFFF"> 
          
-     		
-     		
+        	<LinearLayout 
+        	    android:layout_width="match_parent"
+     			android:layout_height="190dp"
+     			android:orientation="horizontal"   			
+     			android:background="@android:color/darker_gray"
+     			android:gravity="center">
+        	    <LinearLayout 
+        	    	android:layout_width="wrap_content"
+     				android:layout_height="wrap_content"
+     				android:paddingRight="20dp"
+     				android:orientation="vertical">
+        	        <TextView 
+        	        	android:layout_width="wrap_content"
+     					android:layout_height="wrap_content"
+     					android:text="发帖"
+     					/>
+        	        <TextView 
+        	        	android:layout_width="wrap_content"
+     					android:layout_height="wrap_content"
+     					android:text="100"
+     					/>
+        	    </LinearLayout>
+        	    <com.opensource.librarys.circleimageview.CircleImageView
+				     xmlns:app="http://schemas.android.com/apk/res-auto"
+				     android:id="@+id/juxianfang_forum_header_portrait"
+				     android:layout_width="70dp"
+				     android:layout_height="70dp"
+				     android:src="@drawable/ic_launcher"
+				     app:border_color="#68c1d3"
+				     app:border_width="2dp" />
+        	    <LinearLayout 
+        	    	android:layout_width="wrap_content"
+     				android:layout_height="wrap_content"
+     				android:paddingLeft="20dp"
+     				android:orientation="vertical">
+        	        <TextView 
+        	        	android:layout_width="wrap_content"
+     					android:layout_height="wrap_content"
+     					android:text="评论"
+     					/>
+        	        <TextView 
+        	        	android:layout_width="wrap_content"
+     					android:layout_height="wrap_content"
+     					android:text="50"
+     					/>
+        	    </LinearLayout>
+        	    
+        	    
+        	</LinearLayout>
+     		    		
 		</LinearLayout>
 
     
