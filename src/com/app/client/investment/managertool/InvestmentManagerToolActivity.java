@@ -1,13 +1,18 @@
 package com.app.client.investment.managertool;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.app.client.investment.R;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.Spinner;
 /******
  * @author Mattliang@apjcorp.com
  * @date Mar 11, 2015 
@@ -17,6 +22,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 public class InvestmentManagerToolActivity extends FragmentActivity implements OnCheckedChangeListener {
 	
 	
+	private Spinner spinnerAccount ;
 	private RadioGroup tabArea ;
 	private RadioGroup tabQueryArea ;
 	
@@ -51,6 +57,7 @@ public class InvestmentManagerToolActivity extends FragmentActivity implements O
 		// TODO Auto-generated method stub
 		tabArea = (RadioGroup) findViewById(R.id.tabArea);
 		tabQueryArea = (RadioGroup) findViewById(R.id.tabQueryArea);
+		spinnerAccount = (Spinner) findViewById(R.id.spinnerAccount);
 	}
 
 	private void initListener() {
@@ -74,6 +81,15 @@ public class InvestmentManagerToolActivity extends FragmentActivity implements O
 		
 		tabArea.check(R.id.rbBuyIn);
 		tabQueryArea.check(R.id.rbChicangQuery);
+		
+		List<String> mTitles = new ArrayList<String>();
+		mTitles.add("申银万国证券账户");
+		mTitles.add("申银万国证券账户");
+		mTitles.add("申银万国证券账户");
+		ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, mTitles);
+		
+		spinnerAccount.setAdapter(arrayAdapter);
 	}
 
 	@Override
