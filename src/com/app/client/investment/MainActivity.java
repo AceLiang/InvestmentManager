@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.app.client.investment.assetallocationlab.AssetAllocationLabActivity;
 import com.app.client.investment.fundmanager.FundManagerActivity;
 import com.app.client.investment.fundresearch.FundResearchActivity;
+import com.app.client.investment.juxianfang.Juxianfangactivity;
 import com.app.client.investment.manager.InvestmentManagerActivity;
 import com.app.client.investment.managertool.InvestmentManagerToolActivity;
 
@@ -113,7 +114,9 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	
 	public void gotoJuxianyuan(){
-		Toast.makeText(this, "未实现", Toast.LENGTH_LONG).show();
+//		Toast.makeText(this, "未实现", Toast.LENGTH_LONG).show();
+		Intent intent = new Intent(this, Juxianfangactivity.class);
+		startActivity(intent);
 	}
 	
 	public void gotoInvestmentTool(){
