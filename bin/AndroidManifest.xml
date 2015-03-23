@@ -68,6 +68,16 @@
              
         </activity>
         
+        <activity
+            android:name="com.app.client.investment.manager.ActivityAddMainAccount"
+            android:label="@string/juxianlutan_name" >
+             
+        </activity>
+        <activity
+            android:name="com.app.client.investment.manager.ActivitySelectCompany"
+            android:label="@string/juxianlutan_name" >
+             
+        </activity>
         <!-- <activity
             android:name="com.example.searchandgive.member.activity.MemberActivity"
             android:label="@string/app_name" >

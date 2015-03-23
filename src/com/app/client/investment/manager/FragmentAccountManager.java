@@ -3,13 +3,17 @@ package com.app.client.investment.manager;
 import com.app.client.investment.R;
 import com.app.client.investment.utils.ViewUtils;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.HorizontalScrollView;
@@ -23,9 +27,9 @@ import android.widget.ListView;
  * @author 明礼
  *账户管理
  */
-public class FragmentAccountManager extends Fragment {
+public class FragmentAccountManager extends Fragment implements OnClickListener{
 	
-	
+	private Button btnAddMainAccount ;
 	private ListView tableContent ;
 	
 	private RelativeLayout emptyTable ;
@@ -50,23 +54,28 @@ public class FragmentAccountManager extends Fragment {
 		tableContent = (ListView) root.findViewById(R.id.tableContent);
 		emptyTable = (RelativeLayout) root.findViewById(R.id.emptyTable);
 		tableArea = (HorizontalScrollView) root.findViewById(R.id.tableArea);
+		btnAddMainAccount =(Button) root.findViewById(R.id.btnAddMainAccount);
 	}
 
 	private void initListener() {
 		// TODO Auto-generated method stub
-		
+		btnAddMainAccount.setOnClickListener(this);
 	}
 
 	private void initData() {
 		// TODO Auto-generated method stub
 		adapter = new TestAdapter();
-		
+		MarginLayoutParams layoutParams = (MarginLayoutParams) tableArea.getLayoutParams();
 		if (adapter.getCount() > 0) {
 			emptyTable.setVisibility(View.GONE);
+			layoutParams.bottomMargin = ViewUtils.dpToPx(getActivity(), 60);
 		}else {
 			emptyTable.setVisibility(View.VISIBLE);
+			layoutParams.bottomMargin = 0;
 		}
+		tableArea.requestLayout();
 		tableContent.setAdapter(adapter);
+		
 		
 		
 	}
@@ -88,7 +97,7 @@ public class FragmentAccountManager extends Fragment {
 		@Override
 		public int getCount() {
 			// TODO Auto-generated method stub
-			return 8;
+			return 0;
 		}
 
 		@Override
@@ -130,6 +139,23 @@ public class FragmentAccountManager extends Fragment {
 			return convertView;
 		}
 		
+	}
+
+
+
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.btnAddMainAccount:
+			Intent intent = new Intent(getActivity(), ActivityAddMainAccount.class);
+			startActivity(intent);
+			break;
+
+		default:
+			break;
+		}
 	}
 	
 	
