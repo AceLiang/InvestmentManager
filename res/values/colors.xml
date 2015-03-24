@@ -17,4 +17,6 @@
     <color name="pressed_background_riskanalysis_listView2">#FFB973</color>
     <color name="activated_background_riskanalysis_listView3">#FDEBEA</color>
     <color name="pressed_background_riskanalysis_listView3">#F16B60</color>
+    
+    <color name="gray">#EEEEEE</color>
 </resources>

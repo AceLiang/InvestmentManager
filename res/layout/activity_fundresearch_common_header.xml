@@ -102,4 +102,5 @@
     	android:layout_alignLeft="@id/activity_fundresearch_header_textValue3" 
     	android:layout_below="@id/activity_fundresearch_header_textValue3"
 		android:text="管理规模"/>
+	
 </RelativeLayout>
