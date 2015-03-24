@@ -3,23 +3,30 @@ package com.app.client.investment.manager;
 import com.app.client.investment.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.ViewStub;
+import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
 /********
  * @author 明礼 投资管理界面
  */
-public class InvestmentManagerActivity extends FragmentActivity implements OnCheckedChangeListener{
+public class InvestmentManagerActivity extends FragmentActivity implements OnCheckedChangeListener , OnClickListener{
 
+	private DrawerLayout drawer_layout ;
+	private LinearLayout llTradeRecord ;
+	private LinearLayout llNotificationCenter ;
 	private FragmentTabHost mTabHost;
 	
 	
@@ -42,10 +49,16 @@ public class InvestmentManagerActivity extends FragmentActivity implements OnChe
 		setContentView(R.layout.activity_investment_manager);
 
 		lazyView = (ViewStub) findViewById(R.id.lazyView);
+		drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		llTradeRecord = (LinearLayout) findViewById(R.id.llTradeRecord);
+		llNotificationCenter = (LinearLayout) findViewById(R.id.llNotificationCenter);
 		contentArea = (FrameLayout) findViewById(R.id.contentArea);
 		
 		fragmentManager = getSupportFragmentManager();
 		buildNormalLayout();
+		
+		llTradeRecord.setOnClickListener(this);
+		llNotificationCenter.setOnClickListener(this);
 		
 	}
 
@@ -83,5 +96,27 @@ public class InvestmentManagerActivity extends FragmentActivity implements OnChe
 		
 		tabArea.check(R.id.rbAccountNews);
 		
+	}
+
+
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.llTradeRecord:
+			
+			Intent intent = new Intent(this, ActivityTradeRecord.class);
+			
+			startActivity(intent);
+			break;
+		case R.id.llNotificationCenter:
+			Intent intent2 = new Intent(this, ActivityNotificationCenter.class);
+			startActivity(intent2);
+			break ;
+
+		default:
+			break;
+		}
 	}
 }

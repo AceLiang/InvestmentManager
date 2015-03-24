@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RadioGroup 
+        android:id="@+id/rgTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbFundTrade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="投资交易"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbYinzhengqi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="银证期转账"
+            android:textSize="10sp" />
+    </RadioGroup>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.opensource.librarys.slideexpandablelistview.ActionSlideExpandableListView
+            android:id="@+id/lvTrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+        </com.opensource.librarys.slideexpandablelistview.ActionSlideExpandableListView>
+        
+        <RelativeLayout 
+            android:id="@+id/accountArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            
+            <LinearLayout 
+                android:id="@+id/buttomArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true">
+                <Button 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="英证转账"/>
+                
+                <Button 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="银期转账"/>
+            </LinearLayout>
+            <ListView 
+            android:id="@+id/lvAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttomArea"
+            >
+            
+        </ListView>
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>
