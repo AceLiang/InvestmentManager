@@ -24,9 +24,9 @@ public class ActivitySelectCompany extends Activity implements OnItemClickListen
 		setContentView(R.layout.activity_selectcompany);
 		
 		lvCompany = (ListView) findViewById(R.id.lvCompany);
-		adapter = new FakeListViewAdapter(this, R.layout.listview_select_company, 8);
-		lvCompany.setAdapter(adapter);
+		adapter = new FakeListViewAdapter(this, R.layout.listview_select_company, 80);
 		lvCompany.setOnItemClickListener(this);
+		lvCompany.setAdapter(adapter);
 	}
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,

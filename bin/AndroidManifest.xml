@@ -89,6 +89,11 @@
             android:label="@string/juxianlutan_name" >
              
         </activity>
+        <activity
+            android:name="com.app.client.investment.manager.ActivityNotificationDetail"
+            android:label="@string/juxianlutan_name" >
+             
+        </activity>
         
         <!-- <activity
             android:name="com.example.searchandgive.member.activity.MemberActivity"
