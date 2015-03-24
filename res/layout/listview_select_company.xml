@@ -2,8 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" 
+    android:descendantFocusability="blocksDescendants" 
     android:padding="10dp">
     
+    <!-- 解决因为带焦点的控件导致listview的onitemclick 监听不起作用
+    android:descendantFocusability="blocksDescendants" 
+     -->
     <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -11,6 +15,7 @@
         android:text="海通证券"/>
     
     <RadioButton 
+        android:id="@+id/rbChecked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"/>
