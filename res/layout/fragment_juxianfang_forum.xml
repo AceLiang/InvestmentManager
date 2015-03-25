@@ -144,6 +144,11 @@
 			          android:gravity="center"
 			          android:src="@drawable/ic_launcher"/>
 		    </LinearLayout>
+		    
+        <FrameLayout
+		        android:id="@+id/juxianfang_forum_nav_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"/>
     </LinearLayout>
 		     
     <LinearLayout
@@ -160,55 +165,119 @@
      		android:background="#FFFFFF"> 
          
         	<LinearLayout 
-        	    android:layout_width="match_parent"
-     			android:layout_height="190dp"
-     			android:orientation="horizontal"   			
-     			android:background="@android:color/darker_gray"
-     			android:gravity="center">
+        			android:layout_width="match_parent"
+		     			android:layout_height="190dp"
+		     			android:orientation="horizontal"   			
+		     			android:background="@android:color/darker_gray"
+		     			android:gravity="center">
         	    <LinearLayout 
         	    	android:layout_width="wrap_content"
-     				android:layout_height="wrap_content"
-     				android:paddingRight="20dp"
-     				android:orientation="vertical">
+		     				android:layout_height="wrap_content"
+		     				android:paddingRight="20dp"
+		     				android:orientation="vertical">
         	        <TextView 
         	        	android:layout_width="wrap_content"
-     					android:layout_height="wrap_content"
-     					android:text="发帖"
-     					/>
+			     					android:layout_height="wrap_content"
+			     					android:text="发帖"
+			     					/>
         	        <TextView 
         	        	android:layout_width="wrap_content"
-     					android:layout_height="wrap_content"
-     					android:text="100"
-     					/>
+			     					android:layout_height="wrap_content"
+			     					android:text="100"
+			     					/>
         	    </LinearLayout>
         	    <com.opensource.librarys.circleimageview.CircleImageView
-				     xmlns:app="http://schemas.android.com/apk/res-auto"
-				     android:id="@+id/juxianfang_forum_header_portrait"
-				     android:layout_width="70dp"
-				     android:layout_height="70dp"
-				     android:src="@drawable/ic_launcher"
-				     app:border_color="#68c1d3"
-				     app:border_width="2dp" />
+						     xmlns:app="http://schemas.android.com/apk/res-auto"
+						     android:id="@+id/juxianfang_forum_header_portrait"
+						     android:layout_width="70dp"
+						     android:layout_height="70dp"
+						     android:src="@drawable/ic_launcher"
+						     app:border_color="#68c1d3"
+						     app:border_width="2dp" />
         	    <LinearLayout 
         	    	android:layout_width="wrap_content"
-     				android:layout_height="wrap_content"
-     				android:paddingLeft="20dp"
-     				android:orientation="vertical">
+		     				android:layout_height="wrap_content"
+		     				android:paddingLeft="20dp"
+		     				android:orientation="vertical">
         	        <TextView 
         	        	android:layout_width="wrap_content"
-     					android:layout_height="wrap_content"
-     					android:text="评论"
-     					/>
+			     					android:layout_height="wrap_content"
+			     					android:text="评论"
+			     					/>
         	        <TextView 
         	        	android:layout_width="wrap_content"
-     					android:layout_height="wrap_content"
-     					android:text="50"
-     					/>
-        	    </LinearLayout>
-        	    
-        	    
+			     					android:layout_height="wrap_content"
+			     					android:text="50"
+			     					/>
+        	    </LinearLayout>        	    
         	</LinearLayout>
-     		    		
+     		  
+        	<LinearLayout 
+        	    android:layout_width="match_parent"
+			     		android:layout_height="wrap_content"
+			     		android:padding="@dimen/activity_horizontal_margin"
+			     		android:orientation="vertical">
+        	    <RelativeLayout 
+		        	    android:layout_width="match_parent"
+					     		android:layout_height="wrap_content"
+					     		android:gravity="center">
+        	        <ImageView 
+        	            android:id="@+id/juxianfang_forum_nav_iamge1"
+        	            android:layout_width="20dp"
+					     				android:layout_height="20dp"
+					     				android:layout_alignParentLeft="true"
+					     				android:src="@drawable/ic_launcher"/>
+        	        <TextView 
+		        	        android:layout_width="wrap_content"
+					     				android:layout_height="wrap_content"
+					     				android:layout_toRightOf="@id/juxianfang_forum_nav_iamge1"
+					     				android:text="我发的帖子"/>
+        	        <TextView 
+		        	        android:layout_width="wrap_content"
+					     				android:layout_height="wrap_content"
+					     				android:layout_alignParentRight="true"
+					     				android:text="更多"/>
+        	    </RelativeLayout>
+        	    <TextView 
+        	        android:layout_width="match_parent"
+					     		android:layout_height="1dp"
+					     		android:background="@android:color/darker_gray"/>
+        	    <ListView 
+        	        android:id="@+id/juxianfang_forum_mypost_list"
+        	        android:layout_width="match_parent"
+					     		android:layout_height="wrap_content"/>
+        	    
+        	    <RelativeLayout 
+		        	    android:layout_width="match_parent"
+					     		android:layout_height="wrap_content"
+					     		android:paddingTop="20dp"
+					     		android:gravity="center">
+        	        <ImageView 
+        	            android:id="@+id/juxianfang_forum_nav_iamge1"
+        	            android:layout_width="20dp"
+					     				android:layout_height="20dp"
+					     				android:layout_alignParentLeft="true"
+					     				android:src="@drawable/ic_launcher"/>
+        	        <TextView 
+		        	        android:layout_width="wrap_content"
+					     				android:layout_height="wrap_content"
+					     				android:layout_toRightOf="@id/juxianfang_forum_nav_iamge1"
+					     				android:text="我发的评论"/>
+        	        <TextView 
+		        	        android:layout_width="wrap_content"
+					     				android:layout_height="wrap_content"
+					     				android:layout_alignParentRight="true"
+					     				android:text="更多"/>
+        	    </RelativeLayout>
+        	    <TextView 
+        	        android:layout_width="match_parent"
+					     		android:layout_height="1dp"
+					     		android:background="@android:color/darker_gray"/>
+        	    <ListView 
+        	        android:id="@+id/juxianfang_forum_mycomment_list"
+        	        android:layout_width="match_parent"
+					     		android:layout_height="wrap_content"/>
+        	</LinearLayout>		
 		</LinearLayout>
 
     

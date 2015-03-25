@@ -3,15 +3,19 @@ package com.app.client.investment.juxianfang;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.app.client.investment.R;
+import com.app.client.investment.utils.FakeListViewAdapter;
 
 public class FragmentForum extends Fragment implements OnClickListener {
 	private View rootView;
@@ -26,6 +30,12 @@ public class FragmentForum extends Fragment implements OnClickListener {
 	private TextView module2TextView;
 	private TextView module3TextView;
 	
+	private ListView myPostListView;
+	private ListView myCommentListView;
+	
+	private FrameLayout contentFragment;
+	FragmentManager fragmentManager;
+	private FragmentForumHotspot hotspotFragment; 
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +66,10 @@ public class FragmentForum extends Fragment implements OnClickListener {
 		module2TextView = (TextView)view.findViewById(R.id.forum_nav_module2);
 		module3TextView = (TextView)view.findViewById(R.id.forum_nav_module3);
 		
+		myPostListView = (ListView)view.findViewById(R.id.juxianfang_forum_mypost_list);
+		myCommentListView = (ListView)view.findViewById(R.id.juxianfang_forum_mycomment_list);
+		
+		contentFragment = (FrameLayout)view.findViewById(R.id.juxianfang_forum_nav_content);
 	}
 	
 	public void initData() {
@@ -65,6 +79,15 @@ public class FragmentForum extends Fragment implements OnClickListener {
 		module2TextView.setOnClickListener(this);
 		module3TextView.setOnClickListener(this);
 		classifyTextView.performClick();
+		
+		FakeListViewAdapter adapter = new FakeListViewAdapter(getActivity(), R.layout.listview_mypost, 5);
+		myPostListView.setAdapter(adapter);
+		
+		FakeListViewAdapter adapter2 = new FakeListViewAdapter(getActivity(), R.layout.listview_mypost, 5);
+		myCommentListView.setAdapter(adapter2);
+		
+		fragmentManager = getActivity().getSupportFragmentManager();
+		hotspotFragment = new FragmentForumHotspot();
 	}
 	
 	
@@ -102,6 +125,7 @@ public class FragmentForum extends Fragment implements OnClickListener {
 		clearNavSelect();
 		hotspotTextView.setBackgroundColor(this.getResources().getColor(R.color.fundresearch_nav_select_backgound));
 		hotspotTextView.setTextColor(this.getResources().getColor(R.color.fundresearch_nav_select_textColor));
+		fragmentManager.beginTransaction().replace(R.id.juxianfang_forum_nav_content, hotspotFragment).commit();
 	}
 	
 	public void showForumModule1() {
