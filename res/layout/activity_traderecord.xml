@@ -54,12 +54,14 @@
                 android:orientation="horizontal"
                 android:layout_alignParentBottom="true">
                 <Button 
+                    android:id="@+id/btnYinZheng"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="英证转账"/>
                 
                 <Button 
+                    android:id="@+id/btnYinqi"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

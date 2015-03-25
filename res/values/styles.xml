@@ -16,5 +16,10 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="DialogDownToUpAnimation" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowEnterAnimation">@anim/dialog_up_show</item>
+        <item name="android:windowExitAnimation">@anim/dialog_up_dismiss</item>
+    </style>
 
 </resources>
