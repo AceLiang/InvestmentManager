@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="20dp"
+    android:gravity="center">
+    
+    
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_bg"
+        android:text="选择资金账户"/>
+    
+        
+            <EditText 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="转账金额"/>
+            
+            <EditText 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="银行密码"/>
+            
+                <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定转账"/>
+
+</LinearLayout>

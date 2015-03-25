@@ -78,7 +78,6 @@ public class ActivityTradeRecord extends FragmentActivity implements OnCheckedCh
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		Toast.makeText(this, "...................", Toast.LENGTH_LONG).show();
 		List<Options> options = null ;
 		switch (v.getId()) {
 		case R.id.btnYinZheng:

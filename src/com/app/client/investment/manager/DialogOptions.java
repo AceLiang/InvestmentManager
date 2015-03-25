@@ -8,12 +8,14 @@ import com.app.client.investment.utils.ViewUtils;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -79,12 +81,22 @@ public class DialogOptions extends Dialog implements OnItemClickListener{
 		// //设置显示动画
 		mWindow.setWindowAnimations(R.style.DialogDownToUpAnimation);
 		WindowManager.LayoutParams wl = mWindow.getAttributes();
-		wl.width = ViewUtils.dpToPx(context, 100);
 		wl.gravity = Gravity.BOTTOM;
 		// 设置显示位置
 		mWindow.setAttributes(wl);
+		mWindow.setLayout(ViewUtils.dpToPx(context, 300), WindowManager.LayoutParams.WRAP_CONTENT);
 		// 设置点击外围解散
 //		setCanceledOnTouchOutside(true);
+	}
+	
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		super.show();
+//		mWindow.setLayout(ViewUtils.dpToPx(context, 300), WindowManager.LayoutParams.WRAP_CONTENT);
+
+		mWindow.setLayout(ViewUtils.dpToPx(context, 300), WindowManager.LayoutParams.WRAP_CONTENT);
+
 	}
 
 	@Override
@@ -92,6 +104,10 @@ public class DialogOptions extends Dialog implements OnItemClickListener{
 			long id) {
 		// TODO Auto-generated method stub
 		this.dismiss();
+		
+		
+		Intent intent = new Intent(context, ActivityTransferMoney.class);
+		context.startActivity(intent);
 	}
 	
 	
