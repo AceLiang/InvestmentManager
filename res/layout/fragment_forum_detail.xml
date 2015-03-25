@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout 
+        android:id="@+id/forun_detail_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/fundresearch_company_title">
+        
+        <ImageView 
+            android:id="@+id/forun_detail_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_action_previous_item"/>
+        
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"        
+	        android:layout_toRightOf="@id/forun_detail_back_image"       
+	        android:layout_centerInParent="true" 
+	        android:text="返回"      
+	        android:textColor="@color/white"/>
+        
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"                      
+	        android:textSize="16sp"
+	        android:textColor="@color/white"
+	        android:layout_centerInParent="true"
+	        android:text="朱雀白石投资论坛"/>
+        
+        <ImageView 
+            android:id="@+id/forun_detail_comment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_message"/>
+        
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"        
+	        android:layout_toLeftOf="@id/forun_detail_comment_image"    
+	        android:layout_centerInParent="true"    
+	        android:text="评论"      
+	        android:textColor="@color/white"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/forun_detail_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forun_detail_bar_layout"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+        <TextView 
+	        android:id="@+id/forum_detail_title_textView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:textSize="14sp"
+	        android:textStyle="bold"
+	        android:textColor="@android:color/holo_red_light"
+	        android:text="【回馈米粉】首批30万老用户 小米Note专场"/>
+        
+        <com.opensource.librarys.circleimageview.CircleImageView
+		     xmlns:app="http://schemas.android.com/apk/res-auto"
+		     android:id="@+id/forum_detial_account_portrait"
+		     android:layout_width="30dp"
+		     android:layout_height="30dp"
+		     android:layout_gravity="right"
+		     android:src="@drawable/ic_launcher"
+		     android:layout_below="@id/forum_detail_title_textView"
+		     android:layout_alignParentRight="true"
+		     app:border_color="#68c1d3"
+		     app:border_width="2dp" />
+
+        <TextView 
+	        android:id="@+id/forum_detial_account_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_alignLeft="@id/forum_detail_title_textView"
+	        android:text="Chris"/>
+        
+        <TextView 
+	        android:id="@+id/forum_detail_separator0"
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:background="@android:color/darker_gray"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detial_account_name"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+        
+	    <TextView 
+	        android:id="@+id/forum_detail_createAt_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_separator0"
+	        android:text="昨天 22:30"/>
+			    
+			    
+	    <TextView 
+	        android:id="@+id/forum_detail_separator1"
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:background="@android:color/darker_gray"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_createAt_label"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+	    
+	    <TextView 
+	        android:id="@+id/forum_detail_see_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_separator1"
+	        android:text="查看："/>
+	    
+	    <TextView 
+	        android:id="@+id/forum_detail_see_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_see_label"
+	        android:text="23434"/>
+	    
+	    <TextView 
+	        android:id="@+id/forum_detail_separator2"
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical"
+	        android:background="@android:color/darker_gray"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_see_value"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"/>
+	    
+	    <TextView 
+	        android:id="@+id/forum_detail_praise_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_separator2"
+	        android:text="赞："/>
+	
+	    <TextView 
+	        android:id="@+id/forum_detail_praise_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+        	android:layout_toRightOf="@id/forum_detail_praise_label"
+	        android:text="4545"/>
+	    
+	    
+
+		    
+		    
+    </RelativeLayout>
+    
+     <ListView 
+        android:id="@+id/fundresearch_fund_forum_ListView"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_below="@id/forun_detail_title_layout"
+       	android:layout_above="@+id/fundresearch_fund_forum_buttom"/> 
+
+    <LinearLayout 
+        android:id="@+id/fundresearch_fund_forum_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上一页"/>
+        
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="第一页"/>
+        
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下一页"/>
+        
+    </LinearLayout>
+</RelativeLayout>

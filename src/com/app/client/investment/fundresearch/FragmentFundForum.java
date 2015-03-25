@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.app.client.investment.R;
@@ -17,21 +19,30 @@ import com.app.client.investment.utils.ViewUtils;
 public class FragmentFundForum extends Fragment {
 
 	private ListView listView;
-	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_fundresearch_fundforum, container, false);
 		
-		initView(rootView);
-		
+		initView(rootView, container, inflater);
 		return rootView;
 	}
 	
-	public void initView(View view) {
+	public void initView(View view, final ViewGroup container, final LayoutInflater inflater) {
 		listView = (ListView) view.findViewById(R.id.fundresearch_fund_forum_ListView);
 		FakeListViewAdapter adapter = new FakeListViewAdapter(getActivity(), R.layout.listview_fund_form, 5);
 		listView.setAdapter(adapter);
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				container.removeAllViews();
+				View detalView = inflater.inflate(R.layout.fragment_forum_detail, container, false);
+				container.addView(detalView);
+			}	
+		});
 		ViewUtils.enableListViewinScrollerView(listView);
 	}
 }

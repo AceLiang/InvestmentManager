@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp" 
-    android:padding="@dimen/activity_horizontal_margin">
+    android:layout_height="70dp" 
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
     
     <TextView 
         android:id="@+id/fund_form_item_title"
@@ -10,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_red_light"
         android:text="【回馈米粉】首批30万老用户 小米Note专场"/>
@@ -79,8 +82,8 @@
     <com.opensource.librarys.circleimageview.CircleImageView
 	     xmlns:app="http://schemas.android.com/apk/res-auto"
 	     android:id="@+id/fund_form_account_portrait"
-	     android:layout_width="50dp"
-	     android:layout_height="50dp"
+	     android:layout_width="30dp"
+	     android:layout_height="30dp"
 	     android:layout_alignParentTop="true"
 	     android:layout_alignParentRight="true"
 	     android:src="@drawable/ic_launcher"
