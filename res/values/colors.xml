@@ -19,4 +19,6 @@
     <color name="pressed_background_riskanalysis_listView3">#F16B60</color>
     
     <color name="gray">#EEEEEE</color>
+    
+    <color name="table_divider">#DDDDDD</color>
 </resources>

@@ -10,95 +10,48 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="添加主账户"/>
-    <HorizontalScrollView
+    
+    
+    <LinearLayout 
         android:id="@+id/tableArea"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" 
-            android:fillViewport="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+        
+        <com.app.client.investment.views.TableMainLayout 
+            android:id="@+id/tableAccount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             >
+            
+        </com.app.client.investment.views.TableMainLayout>
+        
 
-            <LinearLayout
-                android:id="@+id/tableHeader"
+        <LinearLayout 
+            android:id="@+id/table2Area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:divider="@drawable/separator"
-                android:showDividers="middle"
-                android:orientation="horizontal" >
-                
-                <TextView 
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:text="序号"/>
-                
-                
-                <TextView 
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:padding="15dp"
-                    android:text="类别"/>
-                
-                
-                <TextView 
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:padding="15dp"
-                    android:text="账号名称"/>
-                
-                
-                <TextView 
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:padding="15dp"
-                    android:text="投资状态"/>
-                
-                
-                <TextView 
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:padding="15dp"
-                    android:text="可支配金额"/>
-                
-                
-                <TextView 
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:background="#6da1c9"
-                    android:textColor="#FFFFFF"
-                    android:padding="15dp"
-                    android:text="单价"/>
-            </LinearLayout>
-
-            <ListView
-                android:id="@+id/tableContent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                 >
-            </ListView>
+                android:text="对冲产品管理"/>
+            
+            <com.app.client.investment.views.TableMainLayout 
+            android:id="@+id/tableAccount2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            
+        </com.app.client.investment.views.TableMainLayout>
         </LinearLayout>
-    </HorizontalScrollView>
+        
+        
+    </LinearLayout>
 
     
     
