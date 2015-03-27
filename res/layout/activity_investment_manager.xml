@@ -9,11 +9,57 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <ViewStub
-            android:id="@+id/lazyView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+		<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    >
 
+    <RadioGroup
+        android:id="@+id/tabArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbAccountNews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/label_account_news" />
+
+        <RadioButton
+            android:id="@+id/rbAccountManager"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/label_account_manager" />
+
+        <RadioButton
+            android:id="@+id/rbAccountRank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/label_account_rank" />
+    </RadioGroup>
+    
+    <View 
+        android:id="@+id/indicator"
+        android:layout_width="80dp"
+        android:layout_height="5dp"
+        android:background="#FF0000"
+        android:layout_alignBottom="@+id/tabArea"
+        android:visibility="gone"/>
+
+</RelativeLayout>
 
         <FrameLayout
             android:id="@+id/contentArea"

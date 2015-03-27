@@ -147,4 +147,17 @@ public class ViewUtils {
 	    });
 	}
 	
+	
+	public static View measureView(View v) {
+		ViewGroup.LayoutParams layoutParams = v.getLayoutParams();
+		if (layoutParams != null) {
+			int widthMeasureSpec = layoutParams.width ;
+			int heightMeasureSpec = layoutParams.height;
+			v.measure(widthMeasureSpec, heightMeasureSpec);
+		}
+		
+		
+		return v ;
+	}
+	
 }
