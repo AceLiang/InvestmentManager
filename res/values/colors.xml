@@ -21,4 +21,7 @@
     <color name="gray">#EEEEEE</color>
     
     <color name="table_divider">#DDDDDD</color>
+    
+    <!-- main button -->
+    <color name="main_help">#375d81</color>
 </resources>

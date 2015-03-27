@@ -5,23 +5,24 @@
 
     <!-- The main content view -->
 
-    <ScrollView 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="match_parent" 
+        >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="10dp" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4daec5"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" >
 
             <com.opensource.librarys.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -31,185 +32,317 @@
                 android:src="@drawable/ic_launcher"
                 app:border_color="#68c1d3"
                 app:border_width="2dp" />
-            
 
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:background="#4daec5"
-                android:layout_toRightOf="@+id/head_portrait"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/userId"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sun flower"
-                    android:textColor="#FFFFFF" />
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/head_portrait"
+                    android:orientation="vertical" >
+
+                    <LinearLayout 
+                        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                     <TextView
+                        android:id="@+id/userId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="梁仕杰"
+                        android:textColor="#FFFFFF" 
+                        android:textSize = "15sp"/>  
+                        
+                     <ImageView 
+                         android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:src="@drawable/main_location"
+                    	android:layout_marginLeft="10dp"
+                    	android:layout_marginBottom="3dp"/>
+                     
+                     <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上海"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#FFFFFF" 
+                        android:textSize = "10sp"/> 
+                    </LinearLayout>
+                    
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/separator"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:showDividers="middle" >
 
                         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@drawable/separator"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:showDividers="middle" >
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="256"
+                                android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="256"
-                    android:textColor="#FFFFFF" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Follow"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Follow"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical" >
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="256"
+                                android:textColor="#FFFFFF" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="256"
-                    android:textColor="#FFFFFF" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Followers"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-            </LinearLayout>
-        </RelativeLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            
-            <LinearLayout 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                
-                <LinearLayout 
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:orientation="vertical">
-                <Button
-                    android:id="@+id/btnFundManager"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:gravity="top|left"
-                    android:text="基金经理" />
-                
-                
-                <Button
-                    android:id="@+id/btnFundResearch"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:gravity="bottom|left"
-                    android:text="基金研究" />
-            		</LinearLayout>
-            		
-                
-                <LinearLayout 
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:orientation="vertical">
-                
-                    <Button
-                        android:id="@+id/btnInvestmentManager"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:text="我的投资管理" 
-                    android:gravity="bottom|left"/>
-                
-                    <Button
-                        android:id="@+id/btnInvestmentTool"
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:gravity="bottom|left"
-                    android:text="智能投资工具" />
-                    
-            		</LinearLayout>
-            </LinearLayout>
-
-                
-                <LinearLayout 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <Button
-                        android:id="@+id/btnForum"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom|left"
-                    android:text="论坛" />
-                
-                <Button
-                    android:id="@+id/btnHelp"
-                    android:layout_width="0dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom|left"
-                    android:text="帮助" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Followers"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
                 
-                
-                
-                
-                
-                
-                
-                
-                <Button
+                            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_caiwu"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EBEBEB"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/btnFundManager"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="#EAB640"
+                            android:clickable="true"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/main_fund_manager" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="基金经理"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btnFundResearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#EE395A"
+                            android:clickable="true"
+                            android:paddingLeft="10dp" >
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/main_fund_research" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="基金研究"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/btnInvestmentManager"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:background="#00B0C8"
+                            android:clickable="true"
+                            android:paddingLeft="10dp" >
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/main_invest_manager" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="我的投资管理"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/btnInvestmentTool"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#83A8C3"
+                            android:clickable="true"
+                            android:paddingLeft="10dp" >
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/main_invest_tool" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="智能投资工具"
+                                android:textColor="#FFFFFF"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/btnForum"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="#8BBA30"
+                        android:clickable="true"
+                        android:paddingLeft="10dp">
+
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/main_forum" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:text="论坛"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnHelp"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#375d81"
+                        android:clickable="true"
+                        android:paddingLeft="10dp" >
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/main_help" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:text="帮助"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
                     android:id="@+id/btnJuxianyuan"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:gravity="bottom|left"
-                    android:text="聚贤苑" />
-                
-                <Button
-                    android:id="@+id/btnAssetAllocationLab"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:gravity="bottom|left"
-                    android:text="资产配置实验室" />
-        </LinearLayout>
-    </LinearLayout>
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#f2854c"
+                    android:clickable="true"
+                    android:paddingLeft="10dp" >
 
-</ScrollView>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/mian_juxianyuan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="聚贤苑"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
     <!-- The navigation drawer -->
 
     <LinearLayout

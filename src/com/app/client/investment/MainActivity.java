@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.app.client.investment.assetallocationlab.AssetAllocationLabActivity;
@@ -18,14 +19,14 @@ import com.app.client.investment.managertool.InvestmentManagerToolActivity;
 
 public class MainActivity extends Activity implements OnClickListener{
 	
-	private Button btnFundManager ;
-	private Button btnFundResearch ;
-	private Button btnInvestmentManager ;
-	private Button btnInvestmentTool ;
-	private Button btnForum ;
-	private Button btnHelp ;
-	private Button btnJuxianyuan ;
-	private Button btnAssetAllocationLab;
+	private RelativeLayout btnFundManager ;
+	private RelativeLayout btnFundResearch ;
+	private RelativeLayout btnInvestmentManager ;
+	private RelativeLayout btnInvestmentTool ;
+	private RelativeLayout btnForum ;
+	private RelativeLayout btnHelp ;
+	private RelativeLayout btnJuxianyuan ;
+//	private Button btnAssetAllocationLab;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +42,14 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	private void initViews() {
 		// TODO Auto-generated method stub
-		btnFundManager = (Button) findViewById(R.id.btnFundManager);
-		btnFundResearch = (Button) findViewById(R.id.btnFundResearch);
-		btnInvestmentManager = (Button) findViewById(R.id.btnInvestmentManager);
-		btnInvestmentTool = (Button) findViewById(R.id.btnInvestmentTool);
-		btnForum = (Button) findViewById(R.id.btnForum);
-		btnHelp = (Button) findViewById(R.id.btnHelp);
-		btnJuxianyuan = (Button) findViewById(R.id.btnJuxianyuan);
-		btnAssetAllocationLab = (Button) findViewById(R.id.btnAssetAllocationLab);
+		btnFundManager = (RelativeLayout) findViewById(R.id.btnFundManager);
+		btnFundResearch = (RelativeLayout) findViewById(R.id.btnFundResearch);
+		btnInvestmentManager = (RelativeLayout) findViewById(R.id.btnInvestmentManager);
+		btnInvestmentTool = (RelativeLayout) findViewById(R.id.btnInvestmentTool);
+		btnForum = (RelativeLayout) findViewById(R.id.btnForum);
+		btnHelp = (RelativeLayout) findViewById(R.id.btnHelp);
+		btnJuxianyuan = (RelativeLayout) findViewById(R.id.btnJuxianyuan);
+//		btnAssetAllocationLab = (Button) findViewById(R.id.btnAssetAllocationLab);
 	}
 
 	private void initListener() {
@@ -61,7 +62,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		btnForum.setOnClickListener(this);
 		btnHelp.setOnClickListener(this);
 		btnJuxianyuan.setOnClickListener(this);
-		btnAssetAllocationLab.setOnClickListener(this);
+//		btnAssetAllocationLab.setOnClickListener(this);
 	}
 
 	private void initData() {
@@ -96,8 +97,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		case R.id.btnJuxianyuan:
 			gotoJuxianyuan();
 			break ;
-		case R.id.btnAssetAllocationLab:
-			gotoAssetAllocationLab();
+//		case R.id.btnAssetAllocationLab:
+//			gotoAssetAllocationLab();
 			
 		default:
 			break;

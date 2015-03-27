@@ -13,22 +13,24 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class LoginActivity extends Activity implements OnClickListener{
 	
 	
 	private Button btnLogin ;
-	private CircleImageView btnTakePhoto ;
+	private ImageButton btnTakePhoto ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		
+		getActionBar().hide();
 		setContentView(R.layout.activity_login);
 		
+		
 		btnLogin = (Button) findViewById(R.id.btnLogin);
-		btnTakePhoto = (CircleImageView) findViewById(R.id.btnTakePhoto);
+		btnTakePhoto = (ImageButton) findViewById(R.id.btnTakePhoto);
 		btnLogin.setOnClickListener(this);
 		btnTakePhoto.setOnClickListener(this);
 	}
