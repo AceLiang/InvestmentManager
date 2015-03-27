@@ -26,6 +26,7 @@ public abstract class BaseTableMainLayoutAdapter {
 			IonChildCellClickListener childCellClickListener) {
 		this.childCellClickListener = childCellClickListener;
 	}
+	
 
 	public void setCellClickListener(IonCellClickListener cellClickListener) {
 		this.cellClickListener = cellClickListener;
