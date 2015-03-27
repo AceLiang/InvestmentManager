@@ -74,9 +74,9 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 		fragmentAccountManager = new FragmentAccountManager();
 		fragmentAccountRank = new FragmentAccountRank();
 		indicator = findViewById(R.id.indicator);
+		indicatorHelper = new IndicatorHelper(indicator, rbAccountNews, 3);
 		tabArea.check(R.id.rbAccountNews);
 
-		indicatorHelper = new IndicatorHelper(indicator, rbAccountNews, 3);
 		llTradeRecord.setOnClickListener(this);
 		llNotificationCenter.setOnClickListener(this);
 		
