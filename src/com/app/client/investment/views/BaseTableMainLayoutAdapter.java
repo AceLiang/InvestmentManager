@@ -7,8 +7,11 @@ import android.R.integer;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.RelativeLayout.LayoutParams;
@@ -57,11 +60,11 @@ public abstract class BaseTableMainLayoutAdapter {
 	 * 
 	 * @return
 	 */
-	public abstract View getHeaderCellView(int index, String label);
+	public abstract View getHeaderCellView(int index, String label , TableRow parent);
 
-	public abstract View getCellView(int index, Object data);
+	public abstract View getCellView(int index, Object data ,  TableRow parent);
 	
-	public abstract View getChildCellView(int index, Object data);
+	public abstract View getChildCellView(int index, Object data, TableRow parent);
 
 	public abstract int getCount();
 
@@ -95,7 +98,7 @@ public abstract class BaseTableMainLayoutAdapter {
 
 		int fixColumn = getFixHeaderColumn();
 		for (int i = 0; i < fixColumn; i++) {
-			View view = getHeaderCellView(i, this.headers[i]);
+			View view = getHeaderCellView(i, this.headers[i], componentATableRow);
 			if (i == 0) {
 			} else {
 				view.setLayoutParams(params);
@@ -120,7 +123,7 @@ public abstract class BaseTableMainLayoutAdapter {
 
 		for (int x = 0; x < (headerFieldCount - fixColumn); x++) {
 			int index = x + fixColumn;
-			View view = this.getHeaderCellView(index, this.headers[index]);
+			View view = this.getHeaderCellView(index, this.headers[index] , componentBTableRow);
 			view.setLayoutParams(params);
 			componentBTableRow.addView(view);
 		}
@@ -193,12 +196,13 @@ public abstract class BaseTableMainLayoutAdapter {
 			View view = null ;
 			
 			if (isChildrenView == false) {
-				view = getCellView(i, data);
+				view = getCellView(i, data , tableRowForTableC);
 			}else {
-				view = getChildCellView(i, data);
+				view = getChildCellView(i, data , tableRowForTableC);
 			}
 			if (view != null) {
 				tableRowForTableC.addView(view, params);
+				
 				view.setTag(0);
 //				view.setOnClickListener(this);
 			}
@@ -223,9 +227,9 @@ public abstract class BaseTableMainLayoutAdapter {
 			View view = null ;
 			
 			if (isChildrenView == false) {
-				view = getCellView(x + fixSize, data);
+				view = getCellView(x + fixSize, data , taleRowForTableD);
 			}else {
-				view = getChildCellView(x + fixSize, data);
+				view = getChildCellView(x + fixSize, data , taleRowForTableD);
 			}
 			
 			if (view != null) {

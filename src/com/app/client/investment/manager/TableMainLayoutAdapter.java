@@ -14,12 +14,14 @@ import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
@@ -31,6 +33,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 	
 	private int padding = 10 ;
 	
+	private LayoutInflater inflater ;
 
 	public TableMainLayoutAdapter(Context context, String headers[],
 			List<Account> accounts) {
@@ -38,7 +41,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 		super.context = context;
 		this.headers = headers;
 		this.accounts = accounts;
-		
+		inflater = LayoutInflater.from(context) ;
 		padding = ViewUtils.dpToPx(context, 10);
 	}
 
@@ -52,7 +55,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 	}
 
 	@Override
-	public View getHeaderCellView(int index , String label) {
+	public View getHeaderCellView(int index , String label , TableRow parent) {
 		// TODO Auto-generated method stub
 		TextView headerTextView = new TextView(this.context);
 		
@@ -66,7 +69,9 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 
 		if (index == 1) {
 			headerTextView.setPadding(padding * 3, padding, padding * 3, padding);
-		}else {
+		}else if (index == 7) {
+			headerTextView.setPadding(padding * 3, padding, padding * 3, padding);
+		}else{
 			headerTextView.setPadding(padding , padding, padding, padding);
 		}
 		return headerTextView;
@@ -94,7 +99,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 
 
 	@Override
-	public View getCellView(int index  , Object data) {
+	public View getCellView(int index  , Object data, TableRow parent) {
 		// TODO Auto-generated method stub
 		
 		Account account = (Account) data;
@@ -137,31 +142,35 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 		}
 		Drawable drawable = getDrawable(R.drawable.cell_group_shape);
 		if (index == 1) {
-			
-			CheckBox checkBox = new CheckBox(context);
-			MarginLayoutParams params = new MarginLayoutParams(MarginLayoutParams.WRAP_CONTENT, MarginLayoutParams.WRAP_CONTENT);
-			params.leftMargin = padding ;
-			checkBox.setText(label);
-			checkBox.setGravity(Gravity.CENTER);
-			checkBox.setPadding(0, 0, 0, 0);
-			checkBox.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-			checkBox.setButtonDrawable(R.drawable.selector_add_blue);
-			checkBox.setLayoutParams(params);
-			view = checkBox ;
+//			LinearLayout layoutWrap = new LinearLayout(context);
+//			layoutWrap.setPadding(padding, padding, padding, padding);
+//			layoutWrap.setFocusable(false);
+//			layoutWrap.setClickable(false);
+//			layoutWrap.setGravity(Gravity.CENTER);
+//			CheckBox checkBox = new CheckBox(context);
+//			checkBox.setText(label);
+//			checkBox.setGravity(Gravity.CENTER);
+//			checkBox.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+//			checkBox.setButtonDrawable(R.drawable.selector_add_blue);
+//			checkBox.setClickable(false);
+//			layoutWrap.addView(checkBox);
+			view =  inflater.inflate(R.layout.table_cell_index1, parent, false);
+			CheckBox box = (CheckBox) view.findViewById(R.id.cb) ;
+			box.setText(label);
 			
 		}else if (index == 7) {
 			
-			LinearLayout layout = new LinearLayout(context);
-			layout.setPadding(padding, padding, padding, padding);
-			layout.setGravity(Gravity.CENTER);
-			Button button = new Button(context);
-			button.setText(label);
-			button.setGravity(Gravity.CENTER);
-			button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-			
-			layout.addView(button);
-			
-			view = layout ;
+//			LinearLayout layout = new LinearLayout(context);
+//			layout.setPadding(padding, padding, padding, padding);
+//			layout.setGravity(Gravity.CENTER);
+//			Button button = new Button(context);
+//			button.setText(label);
+//			button.setGravity(Gravity.CENTER);
+//			button.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+//			
+//			layout.addView(button);
+//			view = layout ;
+			view =  inflater.inflate(R.layout.table_cell_index7, parent, false);
 		}else {
 			TextView bodyTextView = new TextView(this.context);
 	        bodyTextView.setText(label);
@@ -180,7 +189,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 
 
 	@Override
-	public View getChildCellView(int index, Object data) {
+	public View getChildCellView(int index, Object data, TableRow parent) {
 		// TODO Auto-generated method stub
 		
 		ChildAccount account = (ChildAccount) data;
@@ -191,7 +200,7 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 			String label = "" ;
 			switch (index) {
 			case 0:
-				label = account.tradeState + account.tradeNumber ;
+				label =  account.tradeNumber+"" ;
 				break;
 			case 1:
 				label = account.accountName + account.accountNumber ;
@@ -222,14 +231,24 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 				break;
 			}
 			Drawable drawable = getDrawable(R.drawable.cell_child_shape);
-			TextView bodyTextView = new TextView(this.context);
-			bodyTextView.setBackgroundDrawable(drawable);
-	        bodyTextView.setText(label);
-	        bodyTextView.setGravity(Gravity.CENTER);
-	        bodyTextView.setPadding(padding, padding, padding, padding);
-	         
-	        view = bodyTextView ;
 			
+			if (index == 0) {
+				view = inflater.inflate(R.layout.table_child_cell_index1, null, false);
+				
+				TextView number = (TextView) view.findViewById(R.id.number);
+				number.setText(label);
+			}else if (index == 7) {
+				view =  inflater.inflate(R.layout.table_cell_index7, parent, false);
+			}else {
+				TextView bodyTextView = new TextView(this.context);
+		        bodyTextView.setText(label);
+		        bodyTextView.setGravity(Gravity.CENTER);
+		        bodyTextView.setPadding(padding, padding, padding, padding);
+		         
+		        view = bodyTextView ;
+			}
+			
+			view.setBackgroundDrawable(drawable);
 		}
 		return view;
 	}

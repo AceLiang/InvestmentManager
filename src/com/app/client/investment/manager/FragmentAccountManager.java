@@ -21,6 +21,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -132,6 +133,11 @@ public class FragmentAccountManager extends Fragment implements OnClickListener 
 					boolean isChildView, Object data) {
 				// TODO Auto-generated method stub
 				if (isChildView == false && column == 1) {
+					
+					if (column == 1) {
+						CheckBox box =(CheckBox) view.findViewById(R.id.cb);
+						box.setChecked(!box.isChecked());
+					}
 					adapter.expandGroup(row);
 					
 				}
