@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
 
     <!-- 资产管理 -->
+    <string name="actionbar_invest_manager">我的投资管理</string>
     <string name="label_account_news">账户动态</string>
     <string name="label_account_manager">账户管理</string>
     <string name="label_account_rank">账户排行</string>

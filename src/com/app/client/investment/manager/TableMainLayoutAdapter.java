@@ -15,6 +15,7 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
@@ -60,9 +61,14 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 		headerTextView.setBackgroundDrawable(drawable);
 		headerTextView.setText(label);
 		headerTextView.setGravity(Gravity.CENTER);
-		headerTextView.setPadding(padding *3, padding, padding*3, padding);
+		
 		headerTextView.setTextColor(Color.WHITE);
 
+		if (index == 1) {
+			headerTextView.setPadding(padding * 3, padding, padding * 3, padding);
+		}else {
+			headerTextView.setPadding(padding , padding, padding, padding);
+		}
 		return headerTextView;
 	}
 
@@ -133,12 +139,14 @@ public class TableMainLayoutAdapter extends BaseTableMainLayoutAdapter{
 		if (index == 1) {
 			
 			CheckBox checkBox = new CheckBox(context);
-			
+			MarginLayoutParams params = new MarginLayoutParams(MarginLayoutParams.WRAP_CONTENT, MarginLayoutParams.WRAP_CONTENT);
+			params.leftMargin = padding ;
 			checkBox.setText(label);
 			checkBox.setGravity(Gravity.CENTER);
 			checkBox.setPadding(0, 0, 0, 0);
 			checkBox.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-			
+			checkBox.setButtonDrawable(R.drawable.selector_add_blue);
+			checkBox.setLayoutParams(params);
 			view = checkBox ;
 			
 		}else if (index == 7) {

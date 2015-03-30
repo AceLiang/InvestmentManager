@@ -24,4 +24,9 @@
     
     <!-- main button -->
     <color name="main_help">#375d81</color>
+    
+    <color name="actionbar_bg">#304059</color>
+    <color name="actionbar_text_color">#FFFFFF</color>
+    
+    <color name="tap_select">#6DA1C9</color>
 </resources>

@@ -24,6 +24,7 @@ public class IndicatorHelper {
 				step = defauleView.getWidth();
 				IndicatorHelper.this.indicator.getLayoutParams().width = step ;
 				IndicatorHelper.this.indicator.requestLayout();
+				IndicatorHelper.this.indicator.setVisibility(View.VISIBLE);
 			}
 		});
 	}

@@ -17,7 +17,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_account_bounce" />
+                android:text="@string/label_account_bounce" 
+                android:textSize="18sp"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -40,9 +41,11 @@
                     android:gravity="center"
                     android:padding="5dp"
                     android:button="@null"
-                    android:background="#FF0000"
+                   	android:background="@drawable/selector_tap_cell"
                     android:checked="true"
-                    android:text="@string/label_week_bounce" />
+                    android:text="@string/label_week_bounce" 
+                    android:textColor="@color/selector_button_text"
+                    />
 
                 <RadioButton
                     android:id="@+id/btnMonthChart"
@@ -52,7 +55,8 @@
                     android:button="@null"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:background="#FF0000"
+                    android:textColor="@color/selector_button_text"
+                    android:background="@drawable/selector_tap_cell"
                     android:text="@string/label_month_bounce" />
 
                 <RadioButton
@@ -63,7 +67,8 @@
                     android:button="@null"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:background="#FF0000"
+                    android:textColor="@color/selector_button_text"
+                    android:background="@drawable/selector_tap_cell"
                     android:text="@string/label_all_bounce" />
             </RadioGroup>
 
@@ -83,6 +88,9 @@
                 android:layout_alignBottom="@+id/piechartView"
                 android:layout_marginBottom="10dp"
                 android:layout_marginRight="40dp"
+                android:padding="10dp"
+                android:background="#F7464A"
+                android:textColor="#FFFFFF"
                 android:text="生成报告"/>
         </RelativeLayout>
 
@@ -95,12 +103,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_invest_bounce_rate" />
+                android:text="@string/label_invest_bounce_rate" 
+                android:textSize="18sp"/>
+            
+            <Spinner 
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spinner_bg"/>
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <com.github.mikephil.charting.charts.HorizontalBarChart
@@ -109,19 +124,69 @@
                 android:layout_height="300dp" />
             
             
-            <LinearLayout 
+            <RelativeLayout 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="#F0f0f0"
+                android:orientation="vertical"
+                android:padding="10dp">
                 <TextView 
+                    android:id="@+id/label1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="投资金额（万元）：100"/>
+                    android:text="投资金额（万元）：100"
+                    android:textSize="15sp"/>
                 <TextView 
+                    android:id="@+id/label2"
+                    android:layout_below="@+id/label1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="上海白石投资"/>
-            </LinearLayout>
+                
+                <RadioGroup 
+                    android:id="@+id/tabArea2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentRight="true">
+                    <RadioButton
+                        android:id="@+id/rbWeek"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:button="@null"
+                   	android:background="@drawable/selector_tap_cell"
+                    android:text="@string/label_week_bounce" 
+                    android:textColor="@color/selector_button_text"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/selector_button_text"
+                    android:background="@drawable/selector_tap_cell"
+                    android:text="@string/label_month_bounce" />
+
+                <RadioButton
+                    android:id="@+id/rbAll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/selector_button_text"
+                    android:background="@drawable/selector_tap_cell"
+                    android:text="@string/label_all_bounce" />
+            </RadioGroup>
+            </RelativeLayout>
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChart"

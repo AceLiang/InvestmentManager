@@ -54,8 +54,8 @@
     <View 
         android:id="@+id/indicator"
         android:layout_width="80dp"
-        android:layout_height="5dp"
-        android:background="#FF0000"
+        android:layout_height="2dp"
+        android:background="#FCB55B"
         android:layout_alignBottom="@+id/tabArea"
         android:visibility="gone"/>
 

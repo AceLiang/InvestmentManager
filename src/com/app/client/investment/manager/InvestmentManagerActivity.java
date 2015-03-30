@@ -1,26 +1,38 @@
 package com.app.client.investment.manager;
 
+import java.io.File;
+
 import com.app.client.investment.R;
+import com.app.client.investment.utils.ActionBarUtil;
 import com.app.client.investment.utils.IndicatorHelper;
 import com.app.client.investment.utils.ViewUtils;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewStub;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -52,10 +64,13 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 
 	private IndicatorHelper indicatorHelper ;
 	
+	private ActionBar actionBar ;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		actionBar = ActionBarUtil.initActionbar(this);
 		setContentView(R.layout.activity_investment_manager);
 
 		drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -81,6 +96,40 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 		llNotificationCenter.setOnClickListener(this);
 		
 
+		View actionbarView = actionBar.getCustomView();
+		ImageButton back = (ImageButton) actionbarView.findViewById(R.id.back);
+		ImageButton menu = (ImageButton) actionbarView.findViewById(R.id.menu);
+		TextView title = (TextView) actionbarView.findViewById(R.id.title);
+		
+		back.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (drawer_layout.isDrawerOpen(GravityCompat.START) 
+						|| drawer_layout.isDrawerOpen(GravityCompat.END)) {
+					drawer_layout.closeDrawers();
+				}else {
+					finish();
+				}
+			}
+		});
+		
+		menu.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				if (drawer_layout.isDrawerOpen(GravityCompat.START) 
+						|| drawer_layout.isDrawerOpen(GravityCompat.END)) {
+					drawer_layout.closeDrawers();
+				}else {
+					drawer_layout.openDrawer(GravityCompat.END);
+				}
+			}
+		});
+		title.setText(R.string.actionbar_invest_manager);
 	}
 
 	@Override
@@ -132,5 +181,15 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 	}
 	
 	
-	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+//		inflater.inflate(R.menu.menu_record_data, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		return super.onOptionsItemSelected(item);
+	}
 }

@@ -54,6 +54,8 @@ public class FragmentAccountNews extends Fragment implements OnCheckedChangeList
 
 	// private Typeface tf;
 	
+	private RadioGroup tabArea2 ;
+	
 	FakeDataFactory factory = new FakeDataFactory() ;
 
 	@Override
@@ -72,6 +74,9 @@ public class FragmentAccountNews extends Fragment implements OnCheckedChangeList
 
 	private void initViews(View root) {
 		// TODO Auto-generated method stub
+		tabArea2 = (RadioGroup) root.findViewById(R.id.tabArea2);
+		
+		
 		btnWeekChart = (RadioButton) root.findViewById(R.id.btnWeekChart);
 		btnMonthChart = (RadioButton) root.findViewById(R.id.btnMonthChart);
 		btnAllChart = (RadioButton) root.findViewById(R.id.btnAllChart);
@@ -91,6 +96,7 @@ public class FragmentAccountNews extends Fragment implements OnCheckedChangeList
 		// radius of the center hole in percent of maximum radius
 		piechartView.setHoleRadius(45f);
 		piechartView.setTransparentCircleRadius(50f);
+		piechartView.setTouchEnabled(false);
 
 		barChartBounceRate = (HorizontalBarChart) root
 				.findViewById(R.id.barChartBounceRate);
@@ -185,6 +191,31 @@ public class FragmentAccountNews extends Fragment implements OnCheckedChangeList
 		btnMonthChart.setOnCheckedChangeListener(this);
 		btnAllChart.setOnCheckedChangeListener(this);
 		
+		tabArea2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				// TODO Auto-generated method stub
+				switch (checkedId) {
+				case R.id.rbWeek:
+					
+					break;
+				case R.id.rbMonth:
+					break ;
+				case R.id.rbAll :
+					break ;
+
+				default:
+					break;
+				}
+				LineData lineData = factory.generateLineChartData();
+				lineChart.setData(lineData);
+				lineChart.animateXY(1500, 1500);
+				lineChart.getLegend().setEnabled(false);
+			}
+		});
+		
+		tabArea2.check(R.id.rbWeek);
 	}
 
 	private void initData() {
