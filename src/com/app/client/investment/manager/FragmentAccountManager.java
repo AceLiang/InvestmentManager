@@ -6,10 +6,13 @@ import java.util.List;
 import com.app.client.investment.R;
 import com.app.client.investment.entity.Account;
 import com.app.client.investment.entity.ChildAccount;
+import com.app.client.investment.utils.CustomDialogBuider;
 import com.app.client.investment.utils.ViewUtils;
+import com.app.client.investment.views.BaseDialog;
 import com.app.client.investment.views.BaseTableMainLayoutAdapter.IonCellClickListener;
 import com.app.client.investment.views.TableMainLayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -20,10 +23,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /*****
@@ -141,6 +150,11 @@ public class FragmentAccountManager extends Fragment implements OnClickListener 
 					adapter.expandGroup(row);
 					
 				}
+				
+				
+				 if (column == 7) {
+					showOperationDialog(isChildView);
+				 }
 			}
 		});
 		tableAccount.setAdapter(adapter);
@@ -177,6 +191,127 @@ public class FragmentAccountManager extends Fragment implements OnClickListener 
 		
 		
 		
+	}
+
+	protected void showOperationDialog(boolean isChildView) {
+		// TODO Auto-generated method stub
+		BaseDialog dialog = new BaseDialog(getActivity());
+		dialog.setTitle("选择操作");
+		
+		ListView listView = null ;
+		if (isChildView) {
+			listView = buildChildAccountListView( dialog);
+		}else {
+			listView = buildMainAccountListView( dialog);
+		}
+		
+		dialog.setCustomContentView(listView);
+		dialog.show();
+	}
+
+	private ListView buildMainAccountListView(final BaseDialog dialog) {
+		// TODO Auto-generated method stub
+		List<String> objects = new ArrayList<String>();
+		objects.add("拆分");
+		objects.add("资金调拨");
+		objects.add("曲线图");
+		objects.add("银证转账");
+		objects.add("证银转账");
+		
+		ListView listView = new ListView(getActivity());
+		
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				
+				Intent intent = null;
+				switch (position) {
+				case 0:
+					intent = new Intent(getActivity(), SplitChildAccount.class);
+					break;
+				case 1:
+					intent = new Intent(getActivity(), ActivityZiJinDiaoBo.class);
+					break;
+				case 2:
+					intent = new Intent(getActivity(), ActivityJingZhengChart.class);
+					break;
+				case 3:
+					break;
+				case 4:
+					
+					break;
+
+				default:
+					break;
+				}
+				
+				if (intent != null) {
+					getActivity().startActivity(intent);
+				}
+				dialog.dismiss();
+			}
+		});
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.item_text, R.id.tv,objects);
+		listView.setAdapter(adapter);
+		return listView;
+	}
+
+	private ListView buildChildAccountListView(final BaseDialog dialog) {
+		// TODO Auto-generated method stub
+		List<String> objects = new ArrayList<String>();
+		objects.add("申请终止交易");
+		objects.add("合并");
+		objects.add("曲线图");
+		objects.add("选择结算方式");
+		objects.add("结算继续购买");
+		objects.add("卖出");
+		objects.add("去交易");
+		objects.add("成交记录");
+		
+		ListView listView = new ListView(getActivity());
+		
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				switch (position) {
+				case 0:
+					
+					break;
+				case 1:
+					
+					break;
+				case 2:
+					
+					break;
+				case 3:
+					
+					break;
+				case 4:
+					
+					break;
+				case 5:
+					
+					break;
+				case 6:
+					
+					break;
+				case 7:
+					
+					break;
+
+				default:
+					break;
+				}
+				dialog.dismiss();
+			}
+		});
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.item_text, R.id.tv,objects);
+		listView.setAdapter(adapter);
+		return listView;
 	}
 
 	@Override

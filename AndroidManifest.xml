@@ -105,6 +105,24 @@
              
         </activity>
         
+        <activity
+            android:name="com.app.client.investment.manager.SplitChildAccount"
+            android:label="@string/app_name" >
+             
+        </activity>
+        
+                <activity
+            android:name="com.app.client.investment.manager.ActivityZiJinDiaoBo"
+            android:label="@string/app_name" >
+             
+        </activity>
+        
+                <activity
+            android:name="com.app.client.investment.manager.ActivityJingZhengChart"
+            android:label="@string/app_name" >
+             
+        </activity>
+        
         <!-- <activity
             android:name="com.example.searchandgive.member.activity.MemberActivity"
             android:label="@string/app_name" >
