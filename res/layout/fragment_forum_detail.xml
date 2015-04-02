@@ -74,21 +74,52 @@
         
         <com.opensource.librarys.circleimageview.CircleImageView
 		     xmlns:app="http://schemas.android.com/apk/res-auto"
-		     android:id="@+id/forum_detial_account_portrait"
-		     android:layout_width="30dp"
-		     android:layout_height="30dp"
+		     android:id="@+id/forum_detial_praise_portrait"
+		     android:layout_width="25dp"
+		     android:layout_height="25dp"
 		     android:layout_gravity="right"
 		     android:src="@drawable/ic_launcher"
 		     android:layout_below="@id/forum_detail_title_textView"
 		     android:layout_alignParentRight="true"
 		     app:border_color="#68c1d3"
 		     app:border_width="2dp" />
+        <TextView 
+            android:id="@+id/forum_detail_favorites"
+            android:layout_width="25dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/forum_detial_praise_portrait"
+	        android:layout_alignLeft="@id/forum_detial_praise_portrait"
+	        android:gravity="center"
+	        android:text="赞"
+	        />
+        
+        <com.opensource.librarys.circleimageview.CircleImageView
+		     xmlns:app="http://schemas.android.com/apk/res-auto"
+		     android:id="@+id/forum_detial_favorite_portrait"
+		     android:layout_width="25dp"
+		     android:layout_height="25dp"
+		     android:layout_gravity="right"
+		     android:layout_marginRight="10dp"
+		     android:src="@drawable/ic_launcher"
+		     android:layout_below="@id/forum_detail_title_textView"
+		     android:layout_toLeftOf="@id/forum_detial_praise_portrait"
+		     app:border_color="#68c1d3"
+		     app:border_width="2dp" />
+        <TextView 
+            android:id="@+id/forum_detail_favorites"
+            android:layout_width="25dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/forum_detial_favorite_portrait"
+	        android:layout_alignLeft="@id/forum_detial_favorite_portrait"
+	        android:gravity="center"
+	        android:text="收藏"
+	        />
 
         <TextView 
 	        android:id="@+id/forum_detial_account_name"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_alignLeft="@id/forum_detail_title_textView"
 	        android:text="Chris"/>
         
@@ -98,7 +129,7 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
 	        android:background="@android:color/darker_gray"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detial_account_name"
 	        android:layout_marginLeft="5dp"
 	        android:layout_marginRight="5dp"/>
@@ -107,7 +138,7 @@
 	        android:id="@+id/forum_detail_createAt_label"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_separator0"
 	        android:text="昨天 22:30"/>
 			    
@@ -118,7 +149,7 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
 	        android:background="@android:color/darker_gray"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_createAt_label"
 	        android:layout_marginLeft="5dp"
 	        android:layout_marginRight="5dp"/>
@@ -127,7 +158,7 @@
 	        android:id="@+id/forum_detail_see_label"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_separator1"
 	        android:text="查看："/>
 	    
@@ -135,7 +166,7 @@
 	        android:id="@+id/forum_detail_see_value"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_see_label"
 	        android:text="23434"/>
 	    
@@ -145,7 +176,7 @@
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
 	        android:background="@android:color/darker_gray"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_see_value"
 	        android:layout_marginLeft="5dp"
 	        android:layout_marginRight="5dp"/>
@@ -154,7 +185,7 @@
 	        android:id="@+id/forum_detail_praise_label"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_separator2"
 	        android:text="赞："/>
 	
@@ -162,28 +193,41 @@
 	        android:id="@+id/forum_detail_praise_value"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@id/forum_detial_account_portrait"
+	        android:layout_alignBottom="@id/forum_detial_favorite_portrait"
         	android:layout_toRightOf="@id/forum_detail_praise_label"
 	        android:text="4545"/>
 	    
 	    
-
+		<TextView 
+		    android:id="@+id/forum_detail_content"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingTop="10dp"
+		    android:layout_below="@id/forum_detail_favorites"
+		    android:lineSpacingExtra="2dp"
+        	android:lineSpacingMultiplier="1.5"
+		    android:text="去年年底的时候曾经有半个小时的时间专访了平井一夫，后来因为聊得很开，所以把时间增加到了45分钟。当时为了写这个专访提纲，做了一些功课，和平井的采访也给了我一些感受。这么说吧，如果说索尼的衰败不可避免的话，那最大的问题就是索尼的过分骄傲。的确，2000年前的索尼有骄傲的本钱，从最早的收音机开始，索尼就是日本在小家电领域的顶尖品牌。而walkman这样在当时创新得令人眼前一震的产品，以及之后的Playstation系列产品，可以说代表了个人电子产品的巅峰。"/>
 		    
-		    
+	   <!-- <TextView 
+	        android:id="@+id/forum_detail_separator3"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:paddingTop="10dp"
+	        android:layout_below="@id/forum_detail_content"
+	        android:background="@android:color/darker_gray"/> -->
+	   
+	   <ListView 
+	        android:id="@+id/forum_detail_reply_ListView"
+	        android:layout_width="match_parent"
+	       	android:layout_height="wrap_content"
+	       	android:layout_below="@id/forum_detail_content"/> 
     </RelativeLayout>
-    
-     <ListView 
-        android:id="@+id/fundresearch_fund_forum_ListView"
-        android:layout_width="match_parent"
-       	android:layout_height="wrap_content"
-       	android:layout_below="@id/forun_detail_title_layout"
-       	android:layout_above="@+id/fundresearch_fund_forum_buttom"/> 
 
-    <LinearLayout 
-        android:id="@+id/fundresearch_fund_forum_buttom"
+    <!-- <LinearLayout 
+        android:id="@+id/forum_detail_buttom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/forun_detail_title_layout"
         android:paddingRight="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_vertical_margin"
         android:orientation="horizontal">
@@ -208,5 +252,5 @@
             android:layout_weight="1"
             android:text="下一页"/>
         
-    </LinearLayout>
+    </LinearLayout> -->
 </RelativeLayout>

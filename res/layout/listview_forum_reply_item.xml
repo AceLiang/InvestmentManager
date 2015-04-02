@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+   
+    <ImageView 
+        android:id="@+id/listview_reply_account_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher"/>
+    
+    <TextView 
+        android:id="@+id/listview_reply_acount_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/listview_reply_account_image"
+        android:layout_alignParentTop="true"
+        android:text="Chris"/>
+    
+    <TextView 
+        android:id="@+id/listview_reply_acount_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft ="@id/listview_reply_acount_name"
+        android:layout_below="@id/listview_reply_acount_name"
+        android:text="昨天: 23:30"/>
+    
+    <TextView 
+        android:id="@+id/listview_reply_seq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="1楼"/>
+
+    <TextView 
+        android:id="@+id/listview_reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_alignLeft ="@id/listview_reply_acount_name"
+        android:layout_below="@id/listview_reply_account_image"
+        android:text="支持扯淡，八级还是能写出一些东西来的"/>
+</RelativeLayout>

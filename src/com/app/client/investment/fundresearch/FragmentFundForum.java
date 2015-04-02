@@ -22,6 +22,7 @@ public class FragmentFundForum extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		container.removeAllViews();
 		View rootView = inflater.inflate(R.layout.fragment_fundresearch_fundforum, container, false);
 		
 		initView(rootView, container, inflater);
@@ -40,6 +41,10 @@ public class FragmentFundForum extends Fragment {
 				// TODO Auto-generated method stub
 				container.removeAllViews();
 				View detalView = inflater.inflate(R.layout.fragment_forum_detail, container, false);
+				ListView replyListView = (ListView) detalView.findViewById(R.id.forum_detail_reply_ListView);
+				FakeListViewAdapter replyListViewAdapter = new FakeListViewAdapter(getActivity(), R.layout.listview_forum_reply_item, 5);
+				replyListView.setAdapter(replyListViewAdapter);
+				ViewUtils.enableListViewinScrollerView(replyListView);
 				container.addView(detalView);
 			}	
 		});
