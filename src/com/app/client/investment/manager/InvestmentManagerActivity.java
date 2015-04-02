@@ -6,10 +6,12 @@ import com.app.client.investment.R;
 import com.app.client.investment.utils.ActionBarUtil;
 import com.app.client.investment.utils.IndicatorHelper;
 import com.app.client.investment.utils.ViewUtils;
+import com.app.client.investment.views.TabRadioGroup;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -47,7 +49,7 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 	private LinearLayout llNotificationCenter;
 	private FragmentTabHost mTabHost;
 
-	private RadioGroup tabArea;
+	private TabRadioGroup tabArea;
 	private RadioButton rbAccountNews ;
 	private RadioButton rbAccountManager ;
 	private RadioButton rbAccountRank ;
@@ -60,9 +62,6 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 	private FragmentAccountManager fragmentAccountManager;
 	private FragmentAccountRank fragmentAccountRank;
 
-	private View indicator;
-
-	private IndicatorHelper indicatorHelper ;
 	
 	private ActionBar actionBar ;
 	@Override
@@ -83,15 +82,14 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 		rbAccountRank = (RadioButton) findViewById(R.id.rbAccountRank);
 		
 		fragmentManager = getSupportFragmentManager();
-		tabArea = (RadioGroup) findViewById(R.id.tabArea);
-		tabArea.setOnCheckedChangeListener(this);
+		tabArea = (TabRadioGroup) findViewById(R.id.tabArea);
+		tabArea.setChangeListener(this);
 		fragmentAccountNews = new FragmentAccountNews();
 		fragmentAccountManager = new FragmentAccountManager();
 		fragmentAccountRank = new FragmentAccountRank();
-		indicator = findViewById(R.id.indicator);
-		indicatorHelper = new IndicatorHelper(indicator, rbAccountNews, 3);
 		tabArea.check(R.id.rbAccountNews);
 
+		tabArea.setTabColor(Color.parseColor("#FCB55B"));
 		llTradeRecord.setOnClickListener(this);
 		llNotificationCenter.setOnClickListener(this);
 		
@@ -140,24 +138,20 @@ public class InvestmentManagerActivity extends FragmentActivity implements
 		case R.id.rbAccountNews:
 			fragmentManager.beginTransaction()
 					.replace(R.id.contentArea, fragmentAccountNews).commit();
-			indicatorHelper.moveTo(0);
 			break;
 		case R.id.rbAccountManager:
 			fragmentManager.beginTransaction()
 					.replace(R.id.contentArea, fragmentAccountManager).commit();
-			indicatorHelper.moveTo(1);
 			break;
 		case R.id.rbAccountRank:
 			fragmentManager.beginTransaction()
 					.replace(R.id.contentArea, fragmentAccountRank).commit();
-			indicatorHelper.moveTo(2);
 			break;
 
 		default:
 			break;
 		}
 
-		indicator.requestLayout();
 	}
 
 	@Override

@@ -9,15 +9,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-		<RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" 
-    >
 
-    <RadioGroup
+    <com.app.client.investment.views.TabRadioGroup
         android:id="@+id/tabArea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
         android:orientation="horizontal" >
 
         <RadioButton
@@ -49,17 +46,9 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/label_account_rank" />
-    </RadioGroup>
+    </com.app.client.investment.views.TabRadioGroup>
     
-    <View 
-        android:id="@+id/indicator"
-        android:layout_width="80dp"
-        android:layout_height="2dp"
-        android:background="#FCB55B"
-        android:layout_alignBottom="@+id/tabArea"
-        android:visibility="gone"/>
 
-</RelativeLayout>
 
         <FrameLayout
             android:id="@+id/contentArea"

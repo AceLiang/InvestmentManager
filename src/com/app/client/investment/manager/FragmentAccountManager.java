@@ -108,7 +108,7 @@ public class FragmentAccountManager extends Fragment implements OnClickListener 
 
 		accounts = new ArrayList<Account>();
 		
-		for(int i =0 ; i < 20 ; i ++){
+		for(int i =0 ; i < 3 ; i ++){
 			Account account = new Account() ;
 			account.accountName = "申银万国证券" ;
 			account.accountNumber = "100001" ;
@@ -161,7 +161,7 @@ public class FragmentAccountManager extends Fragment implements OnClickListener 
 		
 		
 		accounts2 = new ArrayList<Account>();
-		for(int i =0 ; i < 20 ; i ++){
+		for(int i =0 ; i < 3 ; i ++){
 			ChildAccount childAccount = new ChildAccount();
 			childAccount.accountName = "子账户" ;
 			childAccount.accountNumber = "100001" ;
